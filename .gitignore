@@ -2,3 +2,16 @@
 __pycache__/
 *.pyc
 .DS_Store
+.env
+.sealed
+.vault/
+.tmp_compile/
+*.db
+*.log
+*.sha512
+*.tar.gz
+*.pdf
+dist/
+build/
+nohup.out
+.coverage

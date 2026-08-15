@@ -1,53 +1,44 @@
+#!/usr/bin/env python3
+import sqlite3
 import hashlib
-import os
+import json
 
-def generate_sha512(file_path):
-    BUF_SIZE = 65536
-    sha512 = hashlib.sha512()
-    try:
-        with open(file_path, 'rb') as f:
-            while True:
-                data = f.read(BUF_SIZE)
-                if not data:
-                    break
-                sha512.update(data)
-        return sha512.hexdigest()
-    except FileNotFoundError:
-        return None
+DB_NAME = "audit_ledger.db"
 
-def verify_ledger(ledger_file):
-    print(f"--- Integrity Report for {ledger_file} ---")
-    if not os.path.exists(ledger_file):
-        print("Error: Ledger file not found.")
+def verify_ledger():
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+
+    # Query latest written root rather than static ID
+    cursor.execute("SELECT id, payload_sha512 FROM audit_records ORDER BY id DESC LIMIT 1;")
+    row = cursor.fetchone()
+    if not row:
+        print("[!] No genesis records found in audit_records.")
         return
+    latest_id, stored_root = row
 
-    # Simulate an internal counter or audit ID tracking
-    audit_id = 101 
-    mismatch_found = False
+    target_tables = [
+        ("normalized_federal_awards", "award_id"),
+        ("normalized_state_expenditures", "payment_date, agency_name, vendor_name, amount"),
+        ("normalized_local_rrc", "abstract_id"),
+        ("cross_reference_matches", "id")
+    ]
 
-    with open(ledger_file, 'r') as f:
-        for line in f:
-            parts = line.strip().split(' | ')
-            if len(parts) != 3:
-                continue
-            
-            timestamp, filename, anchored_hash = parts
-            current_hash = generate_sha512(filename)
-            
-            if current_hash is None:
-                print(f"[MISSING] {filename}")
-                mismatch_found = True
-            elif current_hash == anchored_hash:
-                print(f"[VERIFIED] {filename} (Matches anchor from {timestamp})")
-            else:
-                print(f"[WARNING] {filename} HAS BEEN MODIFIED since anchoring!")
-                mismatch_found = True
-                # Cleaned f-string using internal single quotes to prevent syntax breakage
-                print(f"\n\a[!!] CRITICAL INTEGRITY MISMATCH: Audit ID {audit_id} hash drift detected!")
-                os.system(f"termux-notification -t 'CRITICAL: Ledger Drift' -c 'Audit ID {audit_id} has been compromised.'")
+    hasher = hashlib.sha512()
+    for table_name, order_clause in target_tables:
+        cursor.execute(f"SELECT * FROM {table_name} ORDER BY {order_clause};")
+        for r in cursor.fetchall():
+            hasher.update(json.dumps(r, default=str, sort_keys=True).encode('utf-8'))
 
-    if not mismatch_found:
-        print("\nAll systemic records match their anchored cryptographic hashes perfectly.")
+    computed_root = hasher.hexdigest()
+    conn.close()
+
+    if computed_root == stored_root:
+        print(f"[OK] Ledger integrity intact (Record #{latest_id}). Root: {computed_root[:32]}...")
+    else:
+        print(f"[FAIL] State modification detected against Record #{latest_id}!")
+        print(f"  Stored:   {stored_root[:32]}...")
+        print(f"  Computed: {computed_root[:32]}...")
 
 if __name__ == "__main__":
-    verify_ledger('forensic_ledger.sha512')
+    verify_ledger()
