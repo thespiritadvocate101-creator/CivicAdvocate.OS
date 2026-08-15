@@ -1,12 +1,12 @@
 {
-    "timestamp": "2026-06-13T20:56:10.634155",
+    "timestamp": "2026-08-15T11:35:56.064095",
     "nodes": {
         "./municipal_data/truth_mandate_baseline.json": "64c235315200bce37b8b3c2c29480734d92f040059bd6b31c21b7ee202c851199d27bded5c527547e26ac9bdf7b2a13c4dc3133df4fdaeb2fd5611480dd59396",
         "./municipal_data/reconciliation_manifest.json": "5f65379941d995a7f99343e60293cf451c267d1895a939d828562e7e2e71a6f5241b4a55985b40e87aea37324a071704d2901e17d18e5cdec17d2ff095cea0f5",
         "./municipal_data/intake_timeline.json": "dbbdbd0cddc817225761589f2ae92a4cce15ba531999e354182d2b72339729471090b56fd69b1ff7c4b7dedf132c1416deecfa575a01aa3abf694f2c2835b8bf",
-        "./municipal_data/forensic_ledger.json": "de887c88e1f36f52993910c76544ee0ece9f17c05308619917a2e6f45508b9fe4e6b07846fb11af8a5bf309151567702472c97630e31596348ca718c53fb504a",
+        "./municipal_data/forensic_ledger.json": "5448b736775e1b35faf393fe245c95a366cc52a64f3b12f8808d2f12bd1b33b3d4b450ae22672118fc17725f24a124ae02f82fb2571cb29eb76c712953368a62",
         "./municipal_data/federal_strike_package_v1.json": "be9ab9634fe1b878a44db96a0666a5f424c82ee96fa89909bf449d22bdac19eee2469f2437c5c90b88fa6b673019cf8e159a353b7cded561fc5f526a57b4f928",
         "./municipal_data/dashboard_manifest.json": "d0cc506ebae28c6cca37be8e910f5d092c10cf63916d399a203bc0759c9e63b4e1cc8f8fb8a59badcea4b2434dc6f8ea65a7357a0d93e57015b986756ee88132",
-        "./municipal_data/audit_manifest.json": "a5ab957d06c9f46fa6a5b9ec3b98cac5af79a0ed26a2d087d18ef987b08f67f388e5ad8df1a2b7ccce1843ea6de54c3ea32d2679610e653d19f12e0d40de8f7a"
+        "./municipal_data/audit_manifest.json": "145672ecc3bb56c027af290d146dc38e6330b42958788e64ee03ae3979300b1acf28667388be6aa406bb3f905790ab5b4ce98cee97e837dc53a4087390a046c5"
     }
 }

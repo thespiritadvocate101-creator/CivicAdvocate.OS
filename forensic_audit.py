@@ -3,7 +3,7 @@ import os
 import datetime
 import hashlib
 # #  to monitor for forensic integrity
-AUDIT_LOG_DIR = "./forensic_audit_ledgers"
+AUDIT_LOG_DIR = "./municipal_data"
 BASELINE_FILE = "truth_mandate_baseline.json"
 
 def get_timestamp():
