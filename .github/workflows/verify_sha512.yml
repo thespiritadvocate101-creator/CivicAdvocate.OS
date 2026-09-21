@@ -1,4 +1,4 @@
-name: Verify SHA-512 State Integrity
+name: Verify Cryptographic & Database Integrity
 
 on:
   push:
@@ -22,7 +22,7 @@ jobs:
     - name: Audit Manifest & Validate SHA-512 Seal
       run: |
         python -c "
-        import json, hashlib, sys, os
+        import json, sys, os
 
         manifest_path = 'dist/publication/truth_mandate_manifest.json'
         
@@ -48,4 +48,30 @@ jobs:
             sys.exit(1)
 
         print('[✓] SUCCESS: Cryptographic state digest verified successfully.')
+        "
+
+    - name: Run SQLite PRAGMA Integrity Check
+      run: |
+        python -c "
+        import sqlite3, glob, sys, os
+
+        db_files = glob.glob('**/*.db', recursive=True)
+        
+        if not db_files:
+            print('[*] No SQLite .db files found in workspace to verify.')
+        else:
+            for db in db_files:
+                print(f'[*] Checking integrity for: {db}')
+                conn = sqlite3.connect(db)
+                cursor = conn.cursor()
+                cursor.execute('PRAGMA integrity_check;')
+                result = cursor.fetchone()[0]
+                conn.close()
+                
+                print(f'    PRAGMA integrity_check result: {result}')
+                if result != 'ok':
+                    print(f'[!] ERROR: Database integrity check failed for {db}!')
+                    sys.exit(1)
+
+        print('[✓] SUCCESS: All SQLite databases passed structural integrity checks.')
         "
