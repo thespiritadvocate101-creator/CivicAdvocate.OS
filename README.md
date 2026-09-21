@@ -1,3 +1,4 @@
+[![Verify Cryptographic & Database Integrity](https://github.com/thespiritadvocate101-creator/CivicAdvocate.OS/actions/workflows/verify-integrity.yml/badge.svg)](https://github.com/thespiritadvocate101-creator/CivicAdvocate.OS/actions/workflows/verify-integrity.yml)
 # CivicAdvocate.OS
 
 [![Verify Cryptographic & Database Integrity](https://github.com/thespiritadvocate101-creator/CivicAdvocate.OS/actions/workflows/verify_sha512.yml/badge.svg)](https://github.com/thespiritadvocate101-creator/CivicAdvocate.OS/actions/workflows/verify_sha512.yml)
