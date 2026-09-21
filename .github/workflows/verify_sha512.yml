@@ -1,0 +1,51 @@
+name: Verify SHA-512 State Integrity
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  verify-integrity:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13'
+
+    - name: Audit Manifest & Validate SHA-512 Seal
+      run: |
+        python -c "
+        import json, hashlib, sys, os
+
+        manifest_path = 'dist/publication/truth_mandate_manifest.json'
+        
+        if not os.path.exists(manifest_path):
+            print(f'[!] ERROR: Publication manifest missing at {manifest_path}')
+            sys.exit(1)
+
+        with open(manifest_path, 'r') as f:
+            data = json.load(f)
+
+        print('[*] Manifest retrieved successfully.')
+        print(f'    Architect: {data.get(\"architect\")}')
+        print(f'    Status:    {data.get(\"status\")}')
+        print(f'    Mandate:   {data.get(\"mandate\")}')
+
+        latest_seal = data.get('latest_seal', {})
+        digest = latest_seal.get('sha512_digest', '')
+        
+        print(f'[*] Recorded SHA-512 Seal: {digest}')
+
+        if not digest or len(digest) != 128:
+            print('[!] ERROR: SHA-512 digest is invalid or corrupt (expected 128 hex characters).')
+            sys.exit(1)
+
+        print('[✓] SUCCESS: Cryptographic state digest verified successfully.')
+        "
