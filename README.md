@@ -1,14 +1,13 @@
-# CivicAdvocate.OS Master Ledger Index
-**System Generated:** 2026-06-12 20:08:05  
-**Security Protocol:** Internal Audit Tracking Only  
+# CivicAdvocate.OS
 
----
+[![Verify Cryptographic & Database Integrity](https://github.com/thespiritadvocate101-creator/CivicAdvocate.OS/actions/workflows/verify_sha512.yml/badge.svg)](https://github.com/thespiritadvocate101-creator/CivicAdvocate.OS/actions/workflows/verify_sha512.yml)
 
-## Verified Data Nodes & Manifests
+Publicly broadcasted forensic spatial system featuring automated cryptographic integrity, real-time cadastral spatial mapping (Abstract 544, Johnson County, TX), and persistent ledger synchronization.
 
-| File Name | Date Generated | Classification | Status |
-| :--- | :--- | :--- | :--- |
-| [Manifest_Abstract544_Node_2026-06-12.md](Manifest_Abstract544_Node_2026-06-12.md) | 2026-06-12 | RECO-LITIGATION READY | Initialized |
+## System Architecture
+- **System Architects**: Brandon Lynn Campbell & Gemini Partner
+- **Runtime Environment**: Termux / Python 3.13 / SQLite
+- **Spatial Engine**: Leaflet.js (Abstract 544 Geometry)
+- **Edge Broadcast**: Cloudflare Tunnels (Port 8085)
+- **Automated Verification**: GitHub Actions (SHA-512 Digest Audit & SQLite `PRAGMA integrity_check`)
 
----
-> **System Warning:** All listed file states are mapped directly from local workspace files. Tampering with file structures will invalidate downstream verification checks.
