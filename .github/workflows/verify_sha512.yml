@@ -53,6 +53,40 @@ jobs:
         print('[✓] SUCCESS: Cryptographic state digest verified successfully.')
         "
 
+    - name: Initialize Test SQLite Ledger Database
+      run: |
+        python -c "
+        import sqlite3, os
+
+        os.makedirs('dist', exist_ok=True)
+        db_path = 'dist/audit_ledger.db'
+        
+        conn = sqlite3.connect(db_path)
+        cursor = conn.cursor()
+
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS audit_ledger (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                timestamp TEXT NOT NULL,
+                event_type TEXT NOT NULL,
+                sha512_digest TEXT NOT NULL
+            );
+        ''')
+
+        cursor.execute('''
+            INSERT INTO audit_ledger (timestamp, event_type, sha512_digest)
+            VALUES (
+                '2026-09-21T00:00:00',
+                'GENESIS_CI_TEST',
+                '5cbbe634a609419b76dbc82d042b9bf63e3f7ab55f628a7d005f73eaee3d13a3d4a9c64ba44a29067328968df855fa4a16993c0e534bc0efbb2e38af76abb219'
+            );
+        ''')
+
+        conn.commit()
+        conn.close()
+        print(f'[*] Successfully initialized fresh SQLite ledger at {db_path}')
+        "
+
     - name: Run SQLite PRAGMA Integrity Check
       run: |
         python -c "
@@ -61,20 +95,21 @@ jobs:
         db_files = glob.glob('**/*.db', recursive=True)
         
         if not db_files:
-            print('[*] No SQLite .db files found in workspace to verify.')
-        else:
-            for db in db_files:
-                print(f'[*] Checking integrity for: {db}')
-                conn = sqlite3.connect(db)
-                cursor = conn.cursor()
-                cursor.execute('PRAGMA integrity_check;')
-                result = cursor.fetchone()[0]
-                conn.close()
-                
-                print(f'    PRAGMA integrity_check result: {result}')
-                if result != 'ok':
-                    print(f'[!] ERROR: Database integrity check failed for {db}!')
-                    sys.exit(1)
+            print('[!] ERROR: No SQLite .db files found in workspace to verify.')
+            sys.exit(1)
+
+        for db in db_files:
+            print(f'[*] Checking integrity for: {db}')
+            conn = sqlite3.connect(db)
+            cursor = conn.cursor()
+            cursor.execute('PRAGMA integrity_check;')
+            result = cursor.fetchone()[0]
+            conn.close()
+            
+            print(f'    PRAGMA integrity_check result: {result}')
+            if result != 'ok':
+                print(f'[!] ERROR: Database integrity check failed for {db}!')
+                sys.exit(1)
 
         print('[✓] SUCCESS: All SQLite databases passed structural integrity checks.')
         "
