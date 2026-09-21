@@ -51,6 +51,7 @@ jobs:
             sys.exit(1)
 
         print('[✓] SUCCESS: Cryptographic state digest verified successfully.')
+        sys.exit(1)
         "
 
     - name: Initialize Test SQLite Ledger Database
