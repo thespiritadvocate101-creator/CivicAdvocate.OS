@@ -2,9 +2,9 @@ name: Verify Cryptographic & Database Integrity
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "test/*" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "test/*" ]
   schedule:
     # Runs automatically every day at 00:00 UTC
     - cron: '0 0 * * *'
