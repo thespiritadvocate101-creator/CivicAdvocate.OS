@@ -52,5 +52,23 @@
         "amount": 45.0,
         "memo": "[DATA] EPA compliance endpoint query credits",
         "sha512_seal": "2fa74f97470d7df9f5d7b6f4404d92181b4da1df7050bad77f4657a270776682a849a91452c8a1f634795eaf3dd287c0e61ce5daf81851398f1fb82033d460d6"
+    },
+    {
+        "tx_id": "a9f33b967d25fa48c4a4a90ac1d50cae95e74adf063cf2ea5b11b2a6fab388b9",
+        "timestamp": 1790046398,
+        "account_from": "Primary Treasury",
+        "account_to": "Personal Reserve",
+        "amount": 1500.0,
+        "memo": "Personal necessity draw",
+        "sha512_seal": "28e08399ea762e0a85ed65b02fecd671d53f58ec2eec0e55c309e2b6b7de13f8f43985d962136b6d3af711fd053ac9f6b7a62bb064b0424928e8dcfc649132d2"
+    },
+    {
+        "tx_id": "023e031a64abb32fa1557d06cd64a01d3676d35c6604ccd0fbfb8938c3f07c91",
+        "timestamp": 1790046718,
+        "account_from": "Primary Treasury",
+        "account_to": "PayPal Business Account",
+        "amount": 1500.0,
+        "memo": "Personal requirement draw",
+        "sha512_seal": "614be2f0ff7498050edfbba3fbd5065bd330f80cb822a642d884a4933e385e68f152593ee482b6e9fa818c36a8777538e695c9fc653aa376997efe92eba5e4f8"
     }
 ]
