@@ -1,0 +1,29 @@
+[
+    {
+        "tx_id": "6c109759b406d09d6a82bc5f99503750162a28a1c3d19a97707e6b9da16dbedf",
+        "timestamp": 1790045861,
+        "account_from": "External Capital",
+        "account_to": "Primary Treasury",
+        "amount": 50000.0,
+        "memo": "Initial operational funding deposit",
+        "sha512_seal": "0c4e7f44799d4ac704357db1ee1163081cecd2a657d67f85965b1c01234225d497ee03c52ba508f34cc91b1601cc52b924bc95cafc195bc2ba33ac01b75d2095"
+    },
+    {
+        "tx_id": "3375f83bca70919bcca37b0ae85c6fa221bd5d4ecd6e1da96c7dcc503eeaae4c",
+        "timestamp": 1790045861,
+        "account_from": "Primary Treasury",
+        "account_to": "GIS Infrastructure",
+        "amount": 1500.0,
+        "memo": "Mapping and spatial data processing allocation",
+        "sha512_seal": "d9d528b690f1e3b9c7b15ec5df31c64ac3f69933513fde8775629efc22e8950f0158d2036bf250454d5e0fd3d160e45ca3b97af44d3c21af3be395ec5197bc4b"
+    },
+    {
+        "tx_id": "6562556dfe3777461672caed6c697a16a148cc7f4d24e86d0da087c772893fb8",
+        "timestamp": 1790045861,
+        "account_from": "Primary Treasury",
+        "account_to": "Audit Operations",
+        "amount": 2500.0,
+        "memo": "Cadastral and compliance verification fund",
+        "sha512_seal": "c14b904ed636cf2e11b4befa2f5e7b5518433cfcd15d88f4f34b0113fe0e50bdca1eff4a0365b4bf8506c42ed7a476de8bfedf524c612a7693e8f69ab5a6d8c2"
+    }
+]
