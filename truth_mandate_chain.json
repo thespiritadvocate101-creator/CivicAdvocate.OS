@@ -1,0 +1,24 @@
+[
+    {
+        "index": 0,
+        "previous_hash": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "timestamp": 1790045678,
+        "data": {
+            "mandate": "Truth Mandate Ledger Initialized",
+            "author": "Brandon Lynn Campbell"
+        },
+        "nonce": 0,
+        "hash": "4c92998f34e4590c96cd403bc116dea2dbc006ee73fba915d86fb2a1240b6605269b9f272155a98dfd844d59841b4d2760d1682e617f7cc47ba077b500f7a690"
+    },
+    {
+        "index": 1,
+        "previous_hash": "4c92998f34e4590c96cd403bc116dea2dbc006ee73fba915d86fb2a1240b6605269b9f272155a98dfd844d59841b4d2760d1682e617f7cc47ba077b500f7a690",
+        "timestamp": 1790045678,
+        "data": {
+            "type": "STANDALONE_TRUTH_ANCHOR",
+            "status": "Verified"
+        },
+        "nonce": 183,
+        "hash": "006b9e2db7991412026f5e2e688a4472e0d9a3b18b0a743ecf50614db397263e0f52a704a272a45edd45a022d30908d84db98a98090490fefd42bf6bb5df04fb"
+    }
+]
