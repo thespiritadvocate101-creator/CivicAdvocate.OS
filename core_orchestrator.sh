@@ -43,3 +43,10 @@ python archive_manifest.py
 
 echo "------------------------------------------------------------"
 echo "[✓] SYSTEM INTEGRITY OPERATION COMPLETE. REPOSITORY HARMONIZED."
+
+# Master Audit Gate: Verify payouts.db state integrity
+python3 /data/data/com.termux/files/home/verify_payout_digests.py >> ~/cron_execution_errors.log 2>&1
+if [ $? -ne 0 ]; then
+    echo "[!] CRITICAL: Payout digest verification failed. Halting master commit." >> ~/cron_execution_errors.log
+    exit 1
+fi
