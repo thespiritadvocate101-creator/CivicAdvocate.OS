@@ -13,7 +13,7 @@ class FinancialAccountingEngine:
         if os.path.exists(self.ledger_file):
             with open(self.ledger_file, "r") as f:
                 self.transactions = json.load(f)
-            print(f"[+] Loaded {len(transactions_count := len(self.transactions))} financial transactions.")
+            print(f"[+] Loaded {len(self.transactions)} financial transactions.")
         else:
             print("[+] Initializing new financial ledger file.")
 
@@ -37,7 +37,7 @@ class FinancialAccountingEngine:
         
         self.transactions.append(transaction)
         self.save_ledger()
-        print(f"[+] Recorded transaction {tx_id[:16]}... | {amount} -> {account_to} ({memo})")
+        print(f"[+] Recorded transaction {tx_id[:16]}... | ${amount:,.2f} -> {account_to} ({memo})")
 
     def save_ledger(self):
         with open(self.ledger_file, "w") as f:
@@ -58,14 +58,3 @@ class FinancialAccountingEngine:
             print(f"  {acc}: ${bal:,.2f}")
         print("-------------------------------\n")
         return balances
-
-if __name__ == "__main__":
-    ledger = FinancialAccountingEngine()
-    
-    # Example initial capital or operational funding entry
-    if not ledger.transactions:
-        ledger.record_transaction("External Capital", "Primary Treasury", 50000.00, "Initial operational funding deposit")
-        ledger.record_transaction("Primary Treasury", "GIS Infrastructure", 1500.00, "Mapping and spatial data processing allocation")
-        ledger.record_transaction("Primary Treasury", "Audit Operations", 2500.00, "Cadastral and compliance verification fund")
-
-    ledger.generate_balance_sheet()

@@ -25,5 +25,32 @@
         "amount": 2500.0,
         "memo": "Cadastral and compliance verification fund",
         "sha512_seal": "c14b904ed636cf2e11b4befa2f5e7b5518433cfcd15d88f4f34b0113fe0e50bdca1eff4a0365b4bf8506c42ed7a476de8bfedf524c612a7693e8f69ab5a6d8c2"
+    },
+    {
+        "tx_id": "5340e8b4c243956f5c2a7dab6bcf7507b262808e3f1aa3c94d95a69e7b295044",
+        "timestamp": 1790046139,
+        "account_from": "Primary Treasury",
+        "account_to": "Operational Spending Account",
+        "amount": 5000.0,
+        "memo": "Operational funding transfer",
+        "sha512_seal": "a81dd2cce0c2c9988d6cecf433e2019f380a8b950f8aa32ebfb78278f0d92ee8208a09880866076150c89e76085c521bb6f5010f08c7e8001bb1a204d0394718"
+    },
+    {
+        "tx_id": "3651b897c3a84f0cb1453ae78345093b647ca566ab6390d3f9df0f98042fe843",
+        "timestamp": 1790046139,
+        "account_from": "Operational Spending Account",
+        "account_to": "Cloud Infrastructure Provider",
+        "amount": 120.0,
+        "memo": "[HOSTING] Monthly Cloudflare Tunnel & server instance upkeep",
+        "sha512_seal": "679176bc64cf6b9d0d6c474ac44b5d5d1e6d9c226434df04195cbca8e987d2ead16c58cfc1bcd91d50ef4c709bffb86ddb6a1a5803a85e1c07e6e5563bad2c0c"
+    },
+    {
+        "tx_id": "e4aaecfc58c1fa72125bd4412ab50c74182ceea6a543484a284b9058f478dc7d",
+        "timestamp": 1790046139,
+        "account_from": "Operational Spending Account",
+        "account_to": "API Data Services",
+        "amount": 45.0,
+        "memo": "[DATA] EPA compliance endpoint query credits",
+        "sha512_seal": "2fa74f97470d7df9f5d7b6f4404d92181b4da1df7050bad77f4657a270776682a849a91452c8a1f634795eaf3dd287c0e61ce5daf81851398f1fb82033d460d6"
     }
 ]
