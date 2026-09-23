@@ -1,0 +1,36 @@
+{
+  "report_sha512": "be062111a82ab70dc7686b44511c3083275184f8aa36bb3f1fd20f874500ff1564fc9c83824a222b47ec30a1841344021d7bdcf8c8a23d2506a61330ade1f054",
+  "report": {
+    "report_metadata": {
+      "generated_at": "2026-09-22T19:35:33.085427Z",
+      "framework": "CivicAdvocate.OS",
+      "total_payout_batches": 1,
+      "total_master_seals": 1
+    },
+    "payout_records": [
+      {
+        "payout_batch_id": "F2AQ6KKSNUPXE",
+        "batch_status": "SUCCESS",
+        "time_created": "2026-09-22T15:49:38Z",
+        "time_completed": "2026-09-22T15:50:02Z",
+        "digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "items": [
+          {
+            "payout_item_id": "LSGSTVPHQ2FRC",
+            "transaction_status": "UNCLAIMED",
+            "digest_sha256": "a0a181adc8b28cb3c42ed8eccaaa4a653932b20980b88622dd0765738bb77922"
+          }
+        ]
+      }
+    ],
+    "master_seals": [
+      {
+        "seal_id": 1,
+        "timestamp": "2026-09-22T19:05:53.471977Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "5f6638e231994a093d2dcfc2e7afef356eab775845acd722f57b4c5eab2c251fc4ffbb7e1a558b6298293b672476cd88eb0f1d1dec49ec8a9ff95515475aeafd",
+        "master_seal_hash": "1ec43713712f80e56f2fa914d2a3c5b237f8a3a5a2fb65a354b730d721a703917ee808ff8313089f0247ee9e9c09b456ca3e71e9ff6e774974d64aa2962f6c15"
+      }
+    ]
+  }
+}

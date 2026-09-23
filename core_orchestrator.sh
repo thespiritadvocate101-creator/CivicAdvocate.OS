@@ -50,3 +50,16 @@ if [ $? -ne 0 ]; then
     echo "[!] CRITICAL: Payout digest verification failed. Halting master commit." >> ~/cron_execution_errors.log
     exit 1
 fi
+
+# Post-Commit Verification Gate: Validate forensic_ledger.db master seals
+python3 /data/data/com.termux/files/home/CivicAdvocate.OS/verify_master_seals.py >> ~/cron_execution_errors.log 2>&1
+if [ $? -ne 0 ]; then
+    echo "[!] CRITICAL: Master seal verification failed. Quarantine ledger state." >> ~/cron_execution_errors.log
+    exit 1
+fi
+
+# Export Report Phase: Generate canonical JSON audit report payload
+python3 /data/data/com.termux/files/home/CivicAdvocate.OS/export_audit_report.py >> ~/cron_execution_errors.log 2>&1
+if [ $? -ne 0 ]; then
+    echo "[!] WARNING: Forensic audit report export encountered an error." >> ~/cron_execution_errors.log
+fi

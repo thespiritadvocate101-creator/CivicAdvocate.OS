@@ -1,0 +1,24 @@
+{
+  "package_id": "FSP-A544-2026-01",
+  "timestamp": "2026-09-22T18:56:05Z",
+  "target": "ABSTRACT 544",
+  "batch_id": "F2AQ6KKSNUPXE",
+  "status": "INITIALIZED",
+  "anchored_vectors": [
+    "Abstract 544",
+    "Silas Elbert Bandy",
+    "Taylor Winona",
+    "Miller Elizabeth"
+  ],
+  "billing_ledger": {
+    "current_accruals": [
+      {
+        "timestamp": "2026-09-22T21:00:05.092060",
+        "service": "forensic_audit_service",
+        "fee": 500.0,
+        "status": "ACCRUED"
+      }
+    ],
+    "total_accrued": 500.0
+  }
+}

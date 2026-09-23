@@ -1,106 +1,123 @@
-#!/usr/bin/env python3
+import os
+import sys
+import json
 import sqlite3
 import hashlib
-import json
-from datetime import datetime, timezone
+from datetime import datetime
 
-DB_NAME = "audit_ledger.db"
-OUTPUT_FILE = "audit_report_latest.md"
+PAYOUTS_DB = os.path.expanduser("~/payouts.db")
+FORENSIC_DB = os.path.expanduser("~/CivicAdvocate.OS/forensic_ledger.db")
+OUTPUT_DIR = os.path.expanduser("~/CivicAdvocate.OS/audit_reports")
 
-def generate_markdown_report():
-    conn = sqlite3.connect(DB_NAME)
-    conn.row_factory = sqlite3.Row
-    cursor = conn.cursor()
 
-    # Query latest written root
-    cursor.execute("SELECT * FROM audit_records ORDER BY id DESC LIMIT 1;")
-    genesis_row = cursor.fetchone()
+def fetch_payouts_data():
+    payouts = []
+    if not os.path.exists(PAYOUTS_DB):
+        return payouts
 
-    if not genesis_row:
-        print("[!] No audit records found in audit_ledger.db.")
-        return
+    with sqlite3.connect(PAYOUTS_DB) as conn:
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT payout_batch_id, batch_status, time_created, time_completed, digest_sha256 FROM payout_batches;"
+        )
+        for row in cursor.fetchall():
+            batch_id = row[0]
+            batch_entry = {
+                "payout_batch_id": batch_id,
+                "batch_status": row[1],
+                "time_created": row[2],
+                "time_completed": row[3],
+                "digest_sha256": row[4],
+                "items": [],
+            }
 
-    # Gather table counts
-    tables = [
-        ("normalized_federal_awards", "Federal Awards"),
-        ("normalized_state_expenditures", "State Expenditures"),
-        ("normalized_local_rrc", "Local RRC Records"),
-        ("cross_reference_matches", "Cross-Reference Matches"),
-        ("audit_records", "Audit Ledger Roots")
-    ]
-    counts = {}
-    for tbl, label in tables:
-        cursor.execute(f"SELECT COUNT(*) FROM {tbl};")
-        counts[label] = cursor.fetchone()[0]
+            # Retrieve associated items
+            try:
+                item_cursor = conn.cursor()
+                item_cursor.execute(
+                    "SELECT payout_item_id, transaction_status, digest_sha256 FROM payout_items WHERE payout_batch_id = ?;",
+                    (batch_id,),
+                )
+                for item_row in item_cursor.fetchall():
+                    batch_entry["items"].append(
+                        {
+                            "payout_item_id": item_row[0],
+                            "transaction_status": item_row[1],
+                            "digest_sha256": item_row[2],
+                        }
+                    )
+            except sqlite3.OperationalError:
+                pass
 
-    # Fetch active cross-reference matches
-    cursor.execute("SELECT federal_entity, state_entity, similarity_score, match_type FROM cross_reference_matches ORDER BY similarity_score DESC;")
-    matches = cursor.fetchall()
+            payouts.append(batch_entry)
+    return payouts
 
-    # Build Markdown document
-    md = []
-    md.append("# CivicAdvocate.OS Audit Ledger Report")
-    md.append(f"**Report Generated:** {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')}")
-    md.append(f"**Genesis Record ID:** #{genesis_row['id']}")
-    md.append(f"**Ledger Layer:** {genesis_row['layer']}")
-    md.append(f"**Record Timestamp:** {genesis_row['timestamp']}")
-    md.append("")
 
-    md.append("## Ledger Record Summary")
-    md.append("| Table / Layer | Total Indexed Records |")
-    md.append("| :--- | :--- |")
-    for label, count in counts.items():
-        md.append(f"| {label} | {count} |")
-    md.append("")
+def fetch_master_seals():
+    seals = []
+    if not os.path.exists(FORENSIC_DB):
+        return seals
 
-    md.append("## Cryptographic Genesis Root")
-    md.append(f"- **Source Authority:** `{genesis_row['source']}`")
-    md.append(f"- **State SHA-512 Root:** `{genesis_row['payload_sha512']}`")
-    md.append("")
+    with sqlite3.connect(FORENSIC_DB) as conn:
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT seal_id, timestamp, payout_digest_sha256, payload_hash_sha512, master_seal_hash FROM master_seals;"
+        )
+        for row in cursor.fetchall():
+            seals.append(
+                {
+                    "seal_id": row[0],
+                    "timestamp": row[1],
+                    "payout_digest_sha256": row[2],
+                    "payload_hash_sha512": row[3],
+                    "master_seal_hash": row[4],
+                }
+            )
+    return seals
 
-    if genesis_row['raw_data']:
-        try:
-            raw_json = json.loads(genesis_row['raw_data'])
-            md.append("### Manifest Payload")
-            md.append("```json")
-            md.append(json.dumps(raw_json, indent=2))
-            md.append("```")
-            md.append("")
-        except Exception:
-            pass
 
-    md.append("## Entity Cross-Reference Matches")
-    if matches:
-        md.append("| Federal Entity | State Entity | Similarity Score | Match Type |")
-        md.append("| :--- | :--- | :--- | :--- |")
-        for m in matches:
-            md.append(f"| {m['federal_entity']} | {m['state_entity']} | {m['similarity_score']:.2f} | {m['match_type']} |")
-    else:
-        md.append("*No entity overlaps found matching or exceeding the similarity threshold.*")
-    md.append("")
+def generate_audit_report():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    ts_now = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    report_filename = f"audit_report_{ts_now}.json"
+    report_path = os.path.join(OUTPUT_DIR, report_filename)
 
-    document_body = "\n".join(md)
+    payout_records = fetch_payouts_data()
+    seal_records = fetch_master_seals()
 
-    # Generate document body SHA-512 signature seal
-    body_signature = hashlib.sha512(document_body.encode('utf-8')).hexdigest()
+    report_payload = {
+        "report_metadata": {
+            "generated_at": datetime.utcnow().isoformat() + "Z",
+            "framework": "CivicAdvocate.OS",
+            "total_payout_batches": len(payout_records),
+            "total_master_seals": len(seal_records),
+        },
+        "payout_records": payout_records,
+        "master_seals": seal_records,
+    }
 
-    # Append Attestation Seal Footer
-    footer = []
-    footer.append("---")
-    footer.append("## Cryptographic Attestation & Signature")
-    footer.append("This report was automatically compiled and verified from `audit_ledger.db`.")
-    footer.append(f"- **Report Body SHA-512 Signature:** `{body_signature}`")
-    footer.append(f"- **State SHA-512 Genesis Anchor:** `{genesis_row['payload_sha512']}`")
-    footer.append("")
+    # Canonicalize and sign report content
+    canonical_bytes = json.dumps(
+        report_payload, sort_keys=True, indent=2
+    ).encode("utf-8")
+    report_sha512 = hashlib.sha512(canonical_bytes).hexdigest()
 
-    full_document = document_body + "\n" + "\n".join(footer)
+    # Embed digest into wrapper
+    final_report = {
+        "report_sha512": report_sha512,
+        "report": report_payload,
+    }
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        f.write(full_document)
+    with open(report_path, "w", encoding="utf-8") as f:
+        json.dump(final_report, f, indent=2)
 
-    conn.close()
-    print(f"[+] Signed Markdown report written to {OUTPUT_FILE}")
-    print(f"[+] Report Signature: {body_signature[:32]}...")
+    print(f"[✓] FORENSIC REPORT GENERATED")
+    print(f"    File:          {report_path}")
+    print(f"    Report SHA512: {report_sha512[:32]}...")
+    print(
+        f"    Records:       {len(payout_records)} Payouts | {len(seal_records)} Master Seals"
+    )
+
 
 if __name__ == "__main__":
-    generate_markdown_report()
+    generate_audit_report()

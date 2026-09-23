@@ -1,0 +1,158 @@
+# (openapi: 3.1.0
+info:
+  title: CivicAdvocate.OS Disbursement & Forensic Ledger API
+  version: 1.0.0
+  description: >
+    REST API specification for executing double-entry disbursements, 
+    verifying SHA-512 ledger cryptographic seals, and querying audit queues.
+servers:
+  - url: https://api.civicadvocate.os/v1
+    description: Production Mainnet Node
+  - url: http://localhost:8085/v1
+    description: Local Termux Development Gateway
+
+paths:
+  /disbursements:
+    post:
+      summary: Initiate Operational Disbursement
+      description: Performs pre-flight balance validation, computes SHA-512 seal, and dispatches payout to payment gateway.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DisbursementRequest'
+      responses:
+        '201':
+          description: Disbursement successfully initiated and dispatched.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DisbursementResponse'
+        '400':
+          description: Validation error or insufficient cleared funds.
+        '500':
+          description: Gateway error; transaction routed to Dead-Letter Queue (DLQ).
+
+  /disbursements/{disbursement_id}:
+    get:
+      summary: Get Disbursement Status & Audit Seal
+      parameters:
+        - name: disbursement_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Current disbursement state and SHA-512 cryptographic digest.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DisbursementResponse'
+        '404':
+          description: Disbursement record not found.
+
+  /disbursements/dlq:
+    get:
+      summary: Retrieve Dead-Letter Queue (DLQ) Exceptions
+      description: Returns all failed disbursement dispatches held for forensic audit review.
+      responses:
+        '200':
+          description: List of DLQ exception records.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/DLQItem'
+
+  /ledger/accounts:
+    get:
+      summary: View Double-Entry Account Balances
+      responses:
+        '200':
+          description: Current balances for clearing and disbursement expense accounts.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LedgerAccount'
+
+components:
+  schemas:
+    DisbursementRequest:
+      type: object
+      required:
+        - disbursement_id
+        - recipient_email
+        - amount
+      properties:
+        disbursement_id:
+          type: string
+          example: disb_20260922_001
+        recipient_email:
+          type: string
+          format: email
+          example: payee@example.com
+        amount:
+          type: number
+          format: float
+          example: 150.00
+        currency:
+          type: string
+          default: USD
+          example: USD
+
+    DisbursementResponse:
+      type: object
+      properties:
+        disbursement_id:
+          type: string
+          example: disb_20260922_001
+        sender_batch_id:
+          type: string
+          example: ca_batch_8f9a2c4e10b
+        status:
+          type: string
+          example: PROCESSING
+        paypal_batch_id:
+          type: string
+          example: GR6WU7EL4V9EQ
+        sha512_digest:
+          type: string
+          example: 3cc379b76489eae4d1ff9e6abc65d56b1312b35a944284d7f2f01d2034b0eb2e367d21015ebbec0b434d3856c90ee0c1eac4755020012f1fdcffc7b4fd226350
+
+    DLQItem:
+      type: object
+      properties:
+        dlq_id:
+          type: integer
+          example: 1
+        disbursement_id:
+          type: string
+          example: disb_20260922_002
+        error_code:
+          type: integer
+          example: 401
+        response_payload:
+          type: string
+          example: '{"error":"invalid_client"}'
+        failed_at:
+          type: number
+          example: 1758560000.0
+
+    LedgerAccount:
+      type: object
+      properties:
+        account_id:
+          type: string
+          example: 1010_PAYPAL_CLEARING
+        account_name:
+          type: string
+          example: PayPal Clearing
+        balance:
+          type: number
+          format: float
+          example: 9850.00)

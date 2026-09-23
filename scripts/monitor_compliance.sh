@@ -1,6 +1,6 @@
 #!/bin/bash
 # Forensic Compliance Monitor
-LOG_FILE="~/CivicAdvocate.OS/registry/audit_log.json"
+LOG_FILE="$HOME/CivicAdvocate.OS/registry/audit_log.json"
 INQUIRY_DATE=$(grep -oE '[0-9]{4}-[0-9]{2}-[0-9]{2}' $LOG_FILE | tail -1)
 CURRENT_DATE=$(date +%Y-%m-%d)
 

@@ -1,7 +1,10 @@
 {
-    "event": "GOVERNANCE_INQUIRY_DISPATCHED",
-    "targets": ["75-1977850", "45-2694620"],
-    "timestamp": "2026-06-14T06:18:07Z",
-    "status": "PENDING_RESPONSE",
-    "hash_index": "f7bdaee5233c2aed45bffde10f1f0f990b45a0f6a39e2440b7c0d30e432dec05c0dfa4986ae912512d74bec26fdd568777c58c90b8bc429b2db774cdfb189b10"
+  "audit_entries": [
+    {
+      "date": "2026-09-21",
+      "abstract": "Abstract 544",
+      "status": "VERIFIED",
+      "sha512_anchor": "5023474e056f7de58a202fa17c122711fd7ddd9e6d2083da364856a3831991ebb3aee36633162581d435d18f97a3e841784bd11a9984dfdb9c19db3031650c5c"
+    }
+  ]
 }
