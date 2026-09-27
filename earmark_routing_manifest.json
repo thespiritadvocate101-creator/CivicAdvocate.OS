@@ -1,0 +1,12 @@
+{
+    "account_id": "101-160-40-73999",
+    "allocation_target": "Texas Comptroller of Public Accounts",
+    "earmark_amount": 319000.0,
+    "classification": "Unclaimed Property Claim Master Reserve",
+    "destination_routing": {
+        "entity": "State Treasury / Holder Portal",
+        "verification_status": "Pending Final Protocol Binding",
+        "timestamp_utc": "2026-09-27T20:05:34.000583+00:00"
+    },
+    "cryptographic_seal": "6956483e5b345bf3ed0458743cbd8e284a3a6d8e72c8287dddbd5b712dff5c12"
+}
