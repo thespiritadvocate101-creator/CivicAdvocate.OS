@@ -1,35 +1,24 @@
 #!/usr/bin/env bash
-# CivicAdvocate.OS - Automated System Startup Script
+echo "[*] Initializing CivicAdvocate.OS System Stack..."
 
-PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-cd "$PROJECT_DIR"
+# 1. Ensure PostgreSQL is active
+pg_ctl status >/dev/null 2>&1 || pg_ctl -D $PREFIX/var/postgres start
+echo "[+] PostgreSQL service verified."
 
-PYTHON_BIN="/data/data/com.termux/files/usr/bin/python3"
-# Explicitly use the discovered absolute path for cloudflared
-CLOUDFLARED_BIN="$(/data/data/com.termux/files/usr/share/doc/cloudflared)"
+# 2. Start Background Task Worker
+nohup python pg_task_worker.py > worker.log 2>&1 &
+echo "[+] Task Worker daemonized (PID: $!)"
 
-echo "[*] Activating Termux wake lock..."
-termux-wake-lock
+# 3. Start Flask API Node (Port 8086)
+nohup python civic_api_node.py > api_node.log 2>&1 &
+echo "[+] Flask API Node online on port 8086 (PID: $!)"
 
-echo "[*] Starting FastAPI server on port 8089..."
-nohup "$PYTHON_BIN" server.py > server.log 2>&1 &
-SERVER_PID=$!
-echo "[+] Server started with PID: $SERVER_PID"
+# 4. Start Code-Server (Port 8080)
+nohup code-server --bind-addr 0.0.0.0:8080 > code_server.log 2>&1 &
+echo "[+] Code-Server active on port 8080 (PID: $!)"
 
-# Wait 3 seconds for Uvicorn to bind to port 8089
-sleep 3
+# 5. Launch Cloudflare Tunnel for API Node (Port 8086)
+nohup cloudflared tunnel --url http://localhost:8086 > tunnel.log 2>&1 &
+echo "[+] Cloudflare Tunnel established (PID: $!)"
 
-if [ -z "$CLOUDFLARED_BIN" ]; then
-    echo "[!] Error: cloudflared binary could not be located."
-    exit 1
-fi
-
-echo "[*] Starting Cloudflare Tunnel pointing to port 8089 (via $CLOUDFLARED_BIN)..."
-nohup "$CLOUDFLARED_BIN" tunnel --url http://localhost:8089 > tunnel.log 2>&1 &
-TUNNEL_PID=$!
-echo "[+] Tunnel started with PID: $TUNNEL_PID"
-
-echo "--------------------------------------------------------"
-echo " CivicAdvocate.OS is running!"
-echo " Logs: server.log | tunnel.log"
-echo "--------------------------------------------------------"
+echo "[*] CivicAdvocate.OS startup sequence complete. Check respective logs for real-time telemetry."

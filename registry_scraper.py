@@ -12,6 +12,9 @@ def paginate_results(search_url):
             print("Extraction complete.")
             break
             
+        import os
+        if os.path.exists("registry_data.log") and os.path.getsize("registry_data.log") > 52428800:
+            open("registry_data.log", "w").close()
         with open("registry_data.log", "a") as f:
             f.write(response.text)
             

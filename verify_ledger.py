@@ -1,32 +1,29 @@
+import hashlib
+import json
 import sqlite3
 
-DB_PATH = "audit_ledger.db"
-
-def verify_ledger():
-    conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-    
-    # Total sealed records count
-    cursor.execute("SELECT COUNT(*) FROM epa_audit_ledger;")
-    total = cursor.fetchone()[0]
-    print(f"Total sealed records in ledger: {total}")
-    
-    # Compliance status breakdown
-    cursor.execute("SELECT compliance_status, COUNT(*) FROM epa_audit_ledger GROUP BY compliance_status;")
-    breakdown = cursor.fetchall()
-    print("\nCompliance Status Breakdown:")
-    for status, count in breakdown:
-        print(f"  - {status}: {count}")
+def verify_record(db_path: str, record_id: int) -> bool:
+    with sqlite3.connect(db_path) as conn:
+        cursor = conn.cursor()
+        cursor.execute("SELECT entry_hash, payload FROM audit_ledger WHERE id = ?", (record_id,))
+        row = cursor.fetchone()
         
-    # Sample records with SHA-512 digests
-    cursor.execute("SELECT frs_id, facility_name, program_system, compliance_status, record_hash FROM epa_audit_ledger LIMIT 5;")
-    samples = cursor.fetchall()
-    print("\nSample Sealed Entries:")
-    for row in samples:
-        print(f"  [FRS ID: {row[0]}] {row[1]} ({row[2]}) -> Status: {row[3]}")
-        print(f"    SHA-512 Digest: {row[4][:32]}...")
+        if not row:
+            print(f"Record {record_id} not found.")
+            return False
+            
+        stored_hash, payload_str = row
+        payload = json.loads(payload_str)
         
-    conn.close()
+        # Re-serialize with exact same normalization rules
+        recalculated_hash = hashlib.sha512(json.dumps(payload, sort_keys=True).encode("utf-8")).hexdigest()
+        
+        is_valid = stored_hash == recalculated_hash
+        print(f"Record ID: {record_id}")
+        print(f"Stored Hash:       {stored_hash}")
+        print(f"Recalculated Hash: {recalculated_hash}")
+        print(f"Integrity Status:  {'PASS' if is_valid else 'FAIL'}")
+        return is_valid
 
 if __name__ == "__main__":
-    verify_ledger()
+    verify_record("forensic_ledger.db", 1)
