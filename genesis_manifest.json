@@ -1,0 +1,29 @@
+{
+    "manifest_version": "1.0.0",
+    "system": "CivicAdvocate.OS",
+    "timestamp_iso": "2026-09-27T11:15:00-05:00",
+    "signatory": {
+        "legal_name": "Brandon Lynn Campbell",
+        "moniker": "#THE~SPIRIT~ADVOCATE",
+        "jurisdiction": "Marystown, Johnson County, Texas",
+        "survey": "Abstract 544 (Silas Elbert Bandy Survey)"
+    },
+    "cryptographic_anchors": {
+        "covenant_sha512": "75d3e2e94b2792bf6db8cb1acc3cd9c75ce7a6e6699e810319135ac35709e7dcf1788353c048ac85aec9525fd65c8cdd01307b3535ac31dd93ce5d32251efa66",
+        "arbitrum_tx_signature": "60b65544d6903ebe2539b11dfe4202645982fd8ba6fbcfdcd95b32d4cae3b6d5",
+        "ipfs_canonical_cid": "QmQCQY81UQsBLudNYPBwdyPzksHRMqV48cPaRy49ARu5mx"
+    },
+    "network_infrastructure": {
+        "p2p_protocol": "Kubo IPFS",
+        "peer_id": "12D3KooWLruVgp8TprcCeRiPM1XdhjoSQqZ9xYJ53i8sjZk3r8gA",
+        "rpc_api": "/ip4/127.0.0.1/tcp/5001",
+        "gateway": "/ip4/127.0.0.1/tcp/8081",
+        "mdns_enabled": false,
+        "telemetry_enabled": false
+    },
+    "repository_state": {
+        "git_commit": "08e605d94bb5465c4e56db2ad7b92b8fc40bf37a",
+        "branch": "main",
+        "commit_subject": "SYS_LOCK: Sovereign Covenant Genesis State"
+    }
+}
