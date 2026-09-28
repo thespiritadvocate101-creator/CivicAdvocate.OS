@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract 544 - Top 10 Closest Facilities</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        body { margin: 0; padding: 0; font-family: sans-serif; }
+        #map { width: 100vw; height: 100vh; }
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <div class="legend">
+        <strong>Abstract 544 Audit Map</strong><br>
+        <span style="color:#e74c3c;">&#9679;</span> Abstract 544 Centroid<br>
+        <span style="color:#357ae8;">&#9679;</span> Audited Facility Markers
+    </div>
+    <script>
+        var map = L.map('map').setView([32.42, -97.38], 12);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        
+        // Abstract 544 Centroid Marker
+        var centroidIcon = L.divIcon({
+            className: 'custom-div-icon',
+            html: "<div style='background-color:#e74c3c;width:18px;height:18px;border-radius:50%;border:2px solid white;'></div>",
+            iconSize: [18, 18],
+            iconAnchor: [9, 9]
+        });
+
+        L.marker([32.42, -97.38], {icon: centroidIcon})
+            .addTo(map)
+            .bindPopup("<b>Silas Elbert Bandy Survey (Abstract 544) Centroid</b><br>Coordinates: 32.42, -97.38");
+
+        L.marker([32.42167, -97.38356])
+            .addTo(map)
+            .bindPopup('<b>#1: CLEBURNE MOTOR CO INC</b><br>Registry ID: 110009504170<br>City: CLEBURNE<br>Distance: 0.238 mi<br>Permits: 2<br>Statutes: FRS / Unassigned, RCRA');
+    
+        L.marker([32.429153, -97.384309])
+            .addTo(map)
+            .bindPopup('<b>#2: RYDER TRUCK RENTAL INC</b><br>Registry ID: 110005104047<br>City: CLEBURNE<br>Distance: 0.681 mi<br>Permits: 2<br>Statutes: FRS / Unassigned, RCRA');
+    
+        L.marker([32.44132, -97.38426])
+            .addTo(map)
+            .bindPopup('<b>#3: PETRO RUBBER PRODUCTS INC</b><br>Registry ID: 110005138911<br>City: JOSHUA<br>Distance: 1.494 mi<br>Permits: 2<br>Statutes: FRS / Unassigned, RCRA');
+    
+        L.marker([32.39895, -97.38596])
+            .addTo(map)
+            .bindPopup('<b>#4: DIESEL INDUSTRIAL TRACTOR INC</b><br>Registry ID: 110005046789<br>City: CLEBURNE<br>Distance: 1.495 mi<br>Permits: 2<br>Statutes: FRS / Unassigned, RCRA');
+    
+        L.marker([32.433233, -97.355667])
+            .addTo(map)
+            .bindPopup('<b>#5: JCS WASTEWATER</b><br>Registry ID: 110034061707<br>City: JOSHUA<br>Distance: 1.688 mi<br>Permits: 1<br>Statutes: FRS / Unassigned');
+    
+        L.marker([32.39469, -97.38832])
+            .addTo(map)
+            .bindPopup('<b>#6: BEST ASPHALT, INC.</b><br>Registry ID: 110001868033<br>City: CLEBURNE<br>Distance: 1.815 mi<br>Permits: 2<br>Statutes: CAA, FRS / Unassigned');
+    
+        L.marker([32.43325, -97.35283])
+            .addTo(map)
+            .bindPopup('<b>#7: GROUNDWATER PLANT #10</b><br>Registry ID: 110061463973<br>City: JOSHUA<br>Distance: 1.83 mi<br>Permits: 1<br>Statutes: FRS / Unassigned');
+    
+        L.marker([32.40101, -97.40373])
+            .addTo(map)
+            .bindPopup('<b>#8: HALLWOOD SWD FACILITY</b><br>Registry ID: 110035783532<br>City: CLEBURNE<br>Distance: 1.907 mi<br>Permits: 1<br>Statutes: FRS / Unassigned');
+    
+        L.marker([32.40101, -97.40373])
+            .addTo(map)
+            .bindPopup('<b>#9: SPARKS DRIVE SWD</b><br>Registry ID: 110070435050<br>City: CLEBURNE<br>Distance: 1.907 mi<br>Permits: 2<br>Statutes: FRS / Unassigned, RCRA');
+    
+        L.marker([32.40107, -97.40798])
+            .addTo(map)
+            .bindPopup('<b>#10: JAMES HARDIE BUILDING PRODUCTS, INC. (CLEB)</b><br>Registry ID: 110071161032<br>City: CLEBURNE<br>Distance: 2.092 mi<br>Permits: 3<br>Statutes: CAA, FRS / Unassigned');
+    
+    </script>
+</body>
+</html>
