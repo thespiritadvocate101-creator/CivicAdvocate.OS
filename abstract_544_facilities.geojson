@@ -40,7 +40,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.985
       }
     },
     {
@@ -60,7 +61,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 2.194
       }
     },
     {
@@ -80,7 +82,8 @@
         "statutes": [
           "CAA",
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 1.815
       }
     },
     {
@@ -100,7 +103,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 3.9
       }
     },
     {
@@ -120,7 +124,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 4.757
       }
     },
     {
@@ -139,7 +144,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 4.672
       }
     },
     {
@@ -158,7 +164,8 @@
         "permit_count": 2,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.684
       }
     },
     {
@@ -177,7 +184,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 4.03
       }
     },
     {
@@ -197,7 +205,8 @@
         "statutes": [
           "CAA",
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.158
       }
     },
     {
@@ -217,7 +226,8 @@
         "statutes": [
           "CERCLA",
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 4.645
       }
     },
     {
@@ -237,7 +247,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 0.238
       }
     },
     {
@@ -256,7 +267,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.364
       }
     },
     {
@@ -275,7 +287,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 4.379
       }
     },
     {
@@ -294,7 +307,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.23
       }
     },
     {
@@ -314,7 +328,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 2.961
       }
     },
     {
@@ -333,7 +348,8 @@
         "permit_count": 2,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.779
       }
     },
     {
@@ -353,7 +369,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 1.495
       }
     },
     {
@@ -376,7 +393,8 @@
           "FRS / Unassigned",
           "RCRA",
           "TSCA"
-        ]
+        ],
+        "distance_miles": 2.84
       }
     },
     {
@@ -395,7 +413,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 4.227
       }
     },
     {
@@ -415,7 +434,8 @@
         "statutes": [
           "CWA",
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.834
       }
     },
     {
@@ -434,7 +454,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 1.83
       }
     },
     {
@@ -454,7 +475,8 @@
         "statutes": [
           "CWA",
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.818
       }
     },
     {
@@ -473,7 +495,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 1.907
       }
     },
     {
@@ -492,7 +515,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.716
       }
     },
     {
@@ -512,7 +536,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 4.586
       }
     },
     {
@@ -532,7 +557,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 2.258
       }
     },
     {
@@ -552,7 +578,8 @@
         "statutes": [
           "CAA",
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.092
       }
     },
     {
@@ -571,7 +598,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 1.688
       }
     },
     {
@@ -590,7 +618,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.664
       }
     },
     {
@@ -609,7 +638,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.901
       }
     },
     {
@@ -628,7 +658,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 4.613
       }
     },
     {
@@ -648,7 +679,8 @@
         "statutes": [
           "CWA",
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.164
       }
     },
     {
@@ -667,7 +699,8 @@
         "permit_count": 2,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 4.907
       }
     },
     {
@@ -686,7 +719,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.233
       }
     },
     {
@@ -705,7 +739,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.805
       }
     },
     {
@@ -724,7 +759,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.085
       }
     },
     {
@@ -743,7 +779,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 4.527
       }
     },
     {
@@ -763,7 +800,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 4.923
       }
     },
     {
@@ -782,7 +820,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.213
       }
     },
     {
@@ -802,7 +841,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 1.494
       }
     },
     {
@@ -821,7 +861,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.478
       }
     },
     {
@@ -840,7 +881,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 4.92
       }
     },
     {
@@ -861,7 +903,8 @@
           "CWA",
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 3.483
       }
     },
     {
@@ -881,7 +924,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 0.681
       }
     },
     {
@@ -904,7 +948,8 @@
           "FRS / Unassigned",
           "RCRA",
           "TSCA"
-        ]
+        ],
+        "distance_miles": 2.366
       }
     },
     {
@@ -923,7 +968,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.277
       }
     },
     {
@@ -942,7 +988,8 @@
         "permit_count": 2,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.78
       }
     },
     {
@@ -962,7 +1009,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 1.907
       }
     },
     {
@@ -981,7 +1029,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.541
       }
     },
     {
@@ -1000,7 +1049,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.211
       }
     },
     {
@@ -1019,7 +1069,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 4.311
       }
     },
     {
@@ -1038,7 +1089,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.726
       }
     },
     {
@@ -1057,7 +1109,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.233
       }
     },
     {
@@ -1077,7 +1130,8 @@
         "statutes": [
           "CWA",
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 2.45
       }
     },
     {
@@ -1096,7 +1150,8 @@
         "permit_count": 1,
         "statutes": [
           "FRS / Unassigned"
-        ]
+        ],
+        "distance_miles": 3.548
       }
     },
     {
@@ -1116,7 +1171,8 @@
         "statutes": [
           "FRS / Unassigned",
           "RCRA"
-        ]
+        ],
+        "distance_miles": 3.364
       }
     }
   ]
