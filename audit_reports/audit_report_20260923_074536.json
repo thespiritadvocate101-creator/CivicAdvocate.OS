@@ -1,0 +1,120 @@
+{
+  "report_sha512": "93af978c2c1a3142fd978ad3c725f099fe30a0cb5e668c50501f76d603b89d5781cded7e435d01c1a963762663f409f0d00673310a3a26cc634d7fa5f34c6b60",
+  "report": {
+    "report_metadata": {
+      "generated_at": "2026-09-23T07:45:36.437827Z",
+      "framework": "CivicAdvocate.OS",
+      "total_payout_batches": 1,
+      "total_master_seals": 13
+    },
+    "payout_records": [
+      {
+        "payout_batch_id": "F2AQ6KKSNUPXE",
+        "batch_status": "SUCCESS",
+        "time_created": "2026-09-22T15:49:38Z",
+        "time_completed": "2026-09-22T15:50:02Z",
+        "digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "items": [
+          {
+            "payout_item_id": "LSGSTVPHQ2FRC",
+            "transaction_status": "UNCLAIMED",
+            "digest_sha256": "a0a181adc8b28cb3c42ed8eccaaa4a653932b20980b88622dd0765738bb77922"
+          }
+        ]
+      }
+    ],
+    "master_seals": [
+      {
+        "seal_id": 1,
+        "timestamp": "2026-09-22T19:05:53.471977Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "5f6638e231994a093d2dcfc2e7afef356eab775845acd722f57b4c5eab2c251fc4ffbb7e1a558b6298293b672476cd88eb0f1d1dec49ec8a9ff95515475aeafd",
+        "master_seal_hash": "1ec43713712f80e56f2fa914d2a3c5b237f8a3a5a2fb65a354b730d721a703917ee808ff8313089f0247ee9e9c09b456ca3e71e9ff6e774974d64aa2962f6c15"
+      },
+      {
+        "seal_id": 2,
+        "timestamp": "2026-09-22T20:00:05.953057Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "dfeb97959b2816ff548d266bc77c02cd877f6a0b04cbee2b92a91b212e192e15513f62cd30ba68b529e5b3efe8606388df82d23f119bbab8a997518a05fab320",
+        "master_seal_hash": "c45d2b88ea3a7d97cf44217da308c8d2367cc788318477d0aa7c52a6c20a151ee6f4299409660f26e2a659bee69c3fb40a66f739597b3daac8116af4e967abd9"
+      },
+      {
+        "seal_id": 3,
+        "timestamp": "2026-09-22T21:00:08.710320Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "daa298acdcdb0d76c444cad185910188b34af662e3f4bbea7c14d88f83053cb0a531e1986b2f9c3709196b667c66663090aa8520e5fbde40eeac48cdf30b709c",
+        "master_seal_hash": "f1bb42b9f5c31ca43a5cc3ca40d592b4d30b26161e3ae9ff05e1092d4942b0d37cf0c14edbb8c4ceab4d6cf8b446c304ed7c23af404d42da5b5eca82c7cee6fd"
+      },
+      {
+        "seal_id": 4,
+        "timestamp": "2026-09-22T22:00:05.064434Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "c3920d90e7495739dc3b2cd78e81ad7d3cfbe66145664535cb8ab00e40c0d240e473964909a2df8980ee9a7847283e57c6741d87fde52f501ba13d37ec67c75c",
+        "master_seal_hash": "5c08a18782369676be0504ab8c91cdb3e9b00e7fe8b66553bc5956a653af835d187232a7d94dbc9baec12e8924e2c303778b2aed4a66e5fb2c9c50fec03395c5"
+      },
+      {
+        "seal_id": 5,
+        "timestamp": "2026-09-22T23:00:05.710793Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "96d59e31ffd265a9309b83deaf6db5291bad5984bdc14c09bd199a02fee739bc8f186275c5ae5b36966f86cfbb516aac0696ab35f6cb263574ec112d79eb837d",
+        "master_seal_hash": "09e3b43ed473c098883d705622d59209089319a31921835e05c58890f7b7c87dc68006e04b1664aa556c4300f44f1298ecd3493d9eb0fc2fdeb3b693af7f6fa7"
+      },
+      {
+        "seal_id": 6,
+        "timestamp": "2026-09-23T00:00:06.011272Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "771533ce20451ec224a1de837405915e98488619bac16fcabbffa4bb1533434584ecb947d237946611c75b74f9e3fa278497b75ba430ab5afd3dbb4ef5fb09c5",
+        "master_seal_hash": "ae5db24b84546e0f1a3dea517b634d0ccb259ec5e883f378c6e95cbf1d0fde70d667017e7436542f2ac879b87ef93f34658b69f50bfc7a2c3131cda0fce0d966"
+      },
+      {
+        "seal_id": 7,
+        "timestamp": "2026-09-23T01:00:04.284530Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "3c755e32cfcb5cd3aae8a1f336026bbc18fa4edd7b0df9d225c4aaf59db4eedf3c0a9aef1177782402afa75e3880bdc223719436187beb55db36b52ff01d6e8b",
+        "master_seal_hash": "0e9456d21d36ec4d4e7a78619bf32af91d2651efa5d76be23a83cd64fadd689b72fe3afb6b4270aa5e2734e5eb8f1b1d382913b2da56ba9a7dabdeb94753f032"
+      },
+      {
+        "seal_id": 8,
+        "timestamp": "2026-09-23T02:00:06.711070Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "e0924a3ad8e264532d1f28da934816de399b29f77ddba59ce8f2ec00282b5829e259b538ce5ae9129bb2c8fea35238de7422b69f5b1bfb44d36e9c1a6fde97ea",
+        "master_seal_hash": "1c6d66e4841a1015c29421bbc6503ab301afccb5d28d061d0b530ba1917650d7c9a3ce666e9af2c1b8696c3c502e5ea0545d12edc41fcbebcd41ca42a91a85f8"
+      },
+      {
+        "seal_id": 9,
+        "timestamp": "2026-09-23T03:00:04.259826Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "a2f8c3de7d4966ac6c7bbe0548036becd5655f102dcff3e3baaf8d994d91ec6e5ff36ac22bcfebc8ba21817e146db59612bf27bbeb6bebb20f972f0fa35f58d4",
+        "master_seal_hash": "8e01fbfcca764219da513dea01296c4aa44985bd312233eaa8e96abb1a64a144b2ffb5fc96bced0a5b2d2774c8ddcaf7e712c3f304610d060888793c9037274d"
+      },
+      {
+        "seal_id": 10,
+        "timestamp": "2026-09-23T04:00:04.176549Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "240bb6abe3a32f328ab53ddf66b6b75caae95376752f1c818b346a3e77c98e890d191e78f6042aa66f18dad14a06b79247ff18e09fb3ef5ffaa2079145c72890",
+        "master_seal_hash": "babc1fb5e6b45327fe908422eccba4ba8c4690dd5ca4f40745f4db55481e93cf4ec4116927ad5219ab197fd25579223a8d18f2568162a20e152f84dc8e7c727f"
+      },
+      {
+        "seal_id": 11,
+        "timestamp": "2026-09-23T05:00:08.535890Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "3b0a3216bc851407770a4ada3cfff0623661094ecc155a83ef6dfdd39847f0d87aeecde16ec6004ed4bfb068e791428839c2436257403c629b29e12240ec8179",
+        "master_seal_hash": "9b2e0cb9a20a13f48891f2a7c6752c3337e6e5a073e004bf8ad94d0067c9acd81e0a731957d0a4d9718c0aa30a633429cd0eeaa378bfe27680bfa9fd7f3de7c7"
+      },
+      {
+        "seal_id": 12,
+        "timestamp": "2026-09-23T06:00:07.717133Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "38dbd8255ba035a7c697cf807ee0746ac6eacfc1fc014fa034b10b817e338adef17ba2afb29817efad1ddb04cdaf921c1cb7a99b244dd4ea31353f59b92a64cd",
+        "master_seal_hash": "6c461c08a8b8756997b48b365c0d7e9f977b2a4019b1d825bd9d662041f398eec293dde9feb5fb52bc008aeb0cec18f1c2db9df266c268e5f0bffff900740754"
+      },
+      {
+        "seal_id": 13,
+        "timestamp": "2026-09-23T07:00:07.358219Z",
+        "payout_digest_sha256": "f2cfe60a6282ab5c29b229fc3a1bf03177a0f1eb432ae065b60328de6e3ff2c8",
+        "payload_hash_sha512": "dcad99f5e7355a1e127d5db0617fd51fdbc1b29de4cfb210ff7d5323fc3a051975f4b70f4e8a12097a0ac198c1972fbcfca646d1ce139290428751c0c87ed918",
+        "master_seal_hash": "285bfee70619ff3f39ce9f56f61088e6baa6c00786907d6a5d50cddd9efbff3e7b9080f4004f6b466dd75a0eb812d3acb6a8ce38141e47b06931560c2b073386"
+      }
+    ]
+  }
+}

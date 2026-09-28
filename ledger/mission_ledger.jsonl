@@ -160,3 +160,4 @@
 {"audit_id": 161, "intake_id": 544, "timestamp": "2026-06-11 01:35:52.814002", "sha512_checksum": "a2a0b4aa849b45756e62994bb844383efe03fdd50b29419c274e270c5371068ce21400f6671d3880e192aaf19ac7aaf6ad284560e30d76effc0984c75459dd1a"}
 {"audit_id": 162, "intake_id": "0545", "timestamp": "2026-06-11 23:15:00", "event": "DRAINAGE_CLAIM_ISSUED"}
 {"event": "TIER_3_FINAL_DISPATCH_SIGN_OFF", "survey": "Silas Elbert Bandy Survey (Abstract 544)", "status": "DISPATCHED", "genesis_anchor": "460596395ba5791761e2e1a3848b598d9f1f0a078d78f244589f6674681329be608a1563be8254c793260907d8966c8882583271787889364584282e38c5211d", "dispatch_targets": ["SEC", "DOJ", "DOE"]}
+{"timestamp": "2026-09-27T19:14:56Z", "event": "SOVEREIGN_COVENANT_DEPLOY", "payload_id": "R00638523", "genesis_hash": "94856bdfd319ef0dc3c9c592ac6c47108a9fac51cf34b75be7b44e6180d35ed6cd89a0a1743dcb11ac6a8c834e102530e2f82b78a446aa517cfd888abda45de0", "status": "ACTIVE"}

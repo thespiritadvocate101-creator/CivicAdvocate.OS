@@ -1,0 +1,99 @@
+[
+  {
+    "id": 1,
+    "ledger_id": "JOHNSON_CO_TX_ABSTRACT_544_AUDIT",
+    "entry_hash": "47ea88dc02ae1466dd4af35fd2ec3af7fa3be7adf9e01bf7b3f92aaf89ba7fbfbd4722922da0826af430f5296f8c132d81680fcfe764e36103e98c4f838b89ce",
+    "entity_id": "ABSTRACT_544",
+    "source_agency": "CADASTRAL_SURVEY_RECORDS",
+    "payload": {
+      "entity_id": "ABSTRACT_544",
+      "source_agency": "CADASTRAL_SURVEY_RECORDS",
+      "survey_data": {
+        "county": "Johnson",
+        "state": "Texas",
+        "status": "Active"
+      },
+      "timestamp": "2026-09-25T06:09:19.186623+00:00"
+    },
+    "verification_status": "VERIFIED_TRUE",
+    "created_at": "2026-09-25T06:09:19.186623+00:00"
+  },
+  {
+    "id": 2,
+    "ledger_id": "JOHNSON_CO_TX_ABSTRACT_544_AUDIT",
+    "entry_hash": "821d5ff6a68f37904b27c3051d29dc8e83b5fade045bacc6ea61f98ab1f99fbfeba2532cfea874999a1446a31756285538c053383c8993a10345b6f1b5e945b6",
+    "entity_id": "ABSTRACT_544_BATCH_1",
+    "source_agency": "CADASTRAL_SURVEY_RECORDS",
+    "payload": {
+      "entity_id": "ABSTRACT_544_BATCH_1",
+      "source_agency": "CADASTRAL_SURVEY_RECORDS",
+      "survey_data": {
+        "county": "Johnson",
+        "state": "Texas",
+        "abstract": "544",
+        "verification_level": "FULL"
+      },
+      "timestamp": "2026-09-25T06:20:45.104368+00:00"
+    },
+    "verification_status": "VERIFIED_TRUE",
+    "created_at": "2026-09-25T06:20:45.104368+00:00"
+  },
+  {
+    "id": 3,
+    "ledger_id": "JOHNSON_CO_TX_ABSTRACT_544_AUDIT",
+    "entry_hash": "52d0d554b829f57de8c6a357b33aae07603d96fdf0345938e5144247b6e4687f2651e61b5ffe98d5bfda1c2e5bcb5f9b94078716352bab6bc46a2ece93d9a2e7",
+    "entity_id": "ABSTRACT_544_PARCEL_A",
+    "source_agency": "CADASTRAL_SURVEY_RECORDS",
+    "payload": {
+      "entity_id": "ABSTRACT_544_PARCEL_A",
+      "source_agency": "CADASTRAL_SURVEY_RECORDS",
+      "survey_data": {
+        "acres": 160,
+        "surveyor": "General Land Office",
+        "status": "VERIFIED"
+      },
+      "timestamp": "2026-09-25T06:23:29.524989+00:00"
+    },
+    "verification_status": "VERIFIED_TRUE",
+    "created_at": "2026-09-25T06:23:29.524989+00:00"
+  },
+  {
+    "id": 4,
+    "ledger_id": "JOHNSON_CO_TX_ABSTRACT_544_AUDIT",
+    "entry_hash": "5cae9168dbf87773854bd191b5bb47773e61128fbe55c7ff6cc6e1d620aeced09b004b4e2cc427dda06fa5737a1147b6f0da32ebec1bd75be6f0ac2d73a16849",
+    "entity_id": "ABSTRACT_544_PARCEL_B",
+    "source_agency": "CADASTRAL_SURVEY_RECORDS",
+    "payload": {
+      "entity_id": "ABSTRACT_544_PARCEL_B",
+      "source_agency": "CADASTRAL_SURVEY_RECORDS",
+      "survey_data": {
+        "acres": 320,
+        "surveyor": "General Land Office",
+        "status": "VERIFIED"
+      },
+      "timestamp": "2026-09-25T06:23:29.553460+00:00"
+    },
+    "verification_status": "VERIFIED_TRUE",
+    "created_at": "2026-09-25T06:23:29.553460+00:00"
+  },
+  {
+    "id": 5,
+    "ledger_id": "JOHNSON_CO_TX_ABSTRACT_544_AUDIT",
+    "entry_hash": "f3106d1375175f91e3ff1df0656cfd1b4d0f3dec1ac9fc28fc9c091b3fc3fb388a9a784dc15c50981c5f309252f8a1c63b6efb78c0ea34fb4226435d4e50e5f0",
+    "entity_id": "ABSTRACT_544_BATCH_1",
+    "source_agency": "CADASTRAL_SURVEY_RECORDS",
+    "payload": {
+      "entity_id": "ABSTRACT_544_BATCH_1",
+      "source_agency": "CADASTRAL_SURVEY_RECORDS",
+      "survey_data": {
+        "county": "Johnson",
+        "state": "Texas",
+        "abstract": "544",
+        "verification_level": "FULL"
+      },
+      "timestamp": "2026-09-25T07:31:14.136988+00:00"
+    },
+    "verification_status": "VERIFIED_TRUE",
+    "created_at": "2026-09-25T07:31:14.136988+00:00"
+  }
+]

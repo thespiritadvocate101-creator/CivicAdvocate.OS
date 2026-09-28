@@ -1,0 +1,41 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -97.38,
+              32.42
+            ],
+            [
+              -97.377834,
+              32.423133
+            ],
+            [
+              -97.370406,
+              32.419479
+            ],
+            [
+              -97.372572,
+              32.416346
+            ],
+            [
+              -97.38,
+              32.42
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "target_abstract": "Abstract 544",
+        "senior_patent": "Silas Elbert Bandy",
+        "county": "Johnson County, Texas",
+        "status": "GeoJSON-Spatial-Polygon-Exported"
+      }
+    }
+  ]
+}

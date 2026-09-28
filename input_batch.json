@@ -1,0 +1,18 @@
+[
+  {
+    "entity_id": "ABSTRACT_544_PARCEL_A",
+    "survey_data": {
+      "acres": 160,
+      "surveyor": "General Land Office",
+      "status": "VERIFIED"
+    }
+  },
+  {
+    "entity_id": "ABSTRACT_544_PARCEL_B",
+    "survey_data": {
+      "acres": 320,
+      "surveyor": "General Land Office",
+      "status": "VERIFIED"
+    }
+  }
+]

@@ -4237,3 +4237,5 @@
 2026-09-26_21:33:50.24226 2026-09-26T21:33:50Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=198.41.200.53
 2026-09-26_21:33:50.47129 2026-09-26T21:33:50Z INF Registered tunnel connection connIndex=0 connection=3dbd89e9-338f-42af-a232-8267bf77c186 event=0 ip=198.41.200.53 location=dfw08 protocol=quic
 2026-09-27_08:33:51.99810 2026-09-27T08:33:51Z ERR update check failed error="no release found"
+2026-09-27_22:29:24.49576 2026-09-27T22:29:24Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-09-28_08:33:51.96968 2026-09-28T08:33:51Z ERR update check failed error="no release found"

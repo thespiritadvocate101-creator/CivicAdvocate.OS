@@ -1,0 +1,23 @@
+2026-09-26 02:15:43.279 CDT [12098] LOG:  starting PostgreSQL 18.2 on aarch64-unknown-linux-android, compiled by Android (13989888, +pgo, +bolt, +lto, +mlgo, based on r563880c) clang version 21.0.0 (https://android.googlesource.com/toolchain/llvm-project 5e96669f06077099aa41290cdb4c5e6fa0f59349), 64-bit
+2026-09-26 02:15:43.281 CDT [12098] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-09-26 02:15:43.284 CDT [12098] LOG:  listening on Unix socket "/data/data/com.termux/files/usr/tmp/.s.PGSQL.5432"
+2026-09-26 02:15:43.454 CDT [12110] LOG:  database system was interrupted; last known up at 2026-09-21 09:59:09 CDT
+2026-09-26 02:15:43.564 CDT [12110] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-09-26 02:15:43.568 CDT [12110] LOG:  redo starts at 0/33C5A08
+2026-09-26 02:15:43.569 CDT [12110] LOG:  invalid record length at 0/33C5B48: expected at least 24, got 0
+2026-09-26 02:15:43.569 CDT [12110] LOG:  redo done at 0/33C5B10 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-09-26 02:15:43.583 CDT [12108] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-09-26 02:15:43.591 CDT [12108] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 3 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.010 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/33C5B48, redo lsn=0/33C5B48
+2026-09-26 02:15:43.602 CDT [12098] LOG:  database system is ready to accept connections
+2026-09-26 02:50:44.198 CDT [12108] LOG:  checkpoint starting: time
+2026-09-26 02:50:44.377 CDT [12108] LOG:  checkpoint complete: wrote 1 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.109 s, sync=0.001 s, total=0.180 s; sync files=1, longest=0.001 s, average=0.001 s; distance=4 kB, estimate=4 kB; lsn=0/33C6C58, redo lsn=0/33C6C00
+2026-09-26 06:00:11.496 CDT [29091] ERROR:  relation "audit_ledger" does not exist at character 55
+2026-09-26 06:00:11.496 CDT [29091] STATEMENT:  SELECT tract_id, status, risk_score, ledger_hash FROM audit_ledger;
+2026-09-26 09:31:34.776 CDT [5689] ERROR:  column "payload" does not exist at character 12
+2026-09-26 09:31:34.776 CDT [5689] STATEMENT:  SELECT id, payload, status, created_at FROM task_queue;
+2026-09-26 09:55:50.681 CDT [12108] LOG:  checkpoint starting: time
+2026-09-26 09:55:52.022 CDT [12108] LOG:  checkpoint complete: wrote 3 buffers (0.0%), wrote 1 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.396 s, sync=0.005 s, total=1.346 s; sync files=4, longest=0.005 s, average=0.002 s; distance=2 kB, estimate=4 kB; lsn=0/33C7790, redo lsn=0/33C7738
+2026-09-27 06:00:07.875 CDT [31672] ERROR:  relation "audit_ledger" does not exist at character 55
+2026-09-27 06:00:07.875 CDT [31672] STATEMENT:  SELECT tract_id, status, risk_score, ledger_hash FROM audit_ledger;
+2026-09-28 06:00:07.545 CDT [15514] ERROR:  relation "audit_ledger" does not exist at character 55
+2026-09-28 06:00:07.545 CDT [15514] STATEMENT:  SELECT tract_id, status, risk_score, ledger_hash FROM audit_ledger;

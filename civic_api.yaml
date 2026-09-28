@@ -1,0 +1,26 @@
+openapi: 3.1.0
+info:
+  title: CivicAdvocate.OS API
+  version: 1.0.0
+  description: Core REST API for data ingestion, background daemon monitoring, and cryptographic ledger verification.
+  x-genesis-foundation:
+    description: Immutable foundational architecture root
+    sha512_digest: "86f810869f5b15fc72a68259465996195f0506acb1174a9ffaed2bc4886a4933e12ce5265c03c3f6728bb711c7f03a382d25e88c35517caaf75122f70d95d341"
+paths:
+  /genesis:
+    get:
+      summary: Broadcast the genesis foundation hash
+      responses:
+        '200':
+          description: Successfully returns the SHA-512 foundation digest
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  foundation_status:
+                    type: string
+                    example: "Active"
+                  sha512_digest:
+                    type: string
+                    example: "86f810869f5b15fc72a68259465996195f0506acb1174a9ffaed2bc4886a4933e12ce5265c03c3f6728bb711c7f03a382d25e88c35517caaf75122f70d95d341"

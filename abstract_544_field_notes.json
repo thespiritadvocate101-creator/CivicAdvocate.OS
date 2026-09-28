@@ -1,0 +1,11 @@
+{
+  "abstract": "Abstract 544",
+  "survey": "Silas Elbert Bandy",
+  "county": "Johnson County, Texas",
+  "calls": [
+    {"quadrant": "NE", "degrees": 30, "minutes": 15, "distance_ft": 1320.0},
+    {"quadrant": "SE", "degrees": 59, "minutes": 45, "distance_ft": 2640.0},
+    {"quadrant": "SW", "degrees": 30, "minutes": 15, "distance_ft": 1320.0},
+    {"quadrant": "NW", "degrees": 59, "minutes": 45, "distance_ft": 2640.0}
+  ]
+}
