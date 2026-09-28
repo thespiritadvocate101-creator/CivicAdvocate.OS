@@ -1,0 +1,562 @@
+[
+  {
+    "RegistryId": "110070281248",
+    "FacilityName": "4C LONE STAR RANCH & OUTDOORS, INC.",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110005153430",
+    "FacilityName": "ATLAS MACHINE & WELDING SERVICE INC",
+    "City": "JOSHUA",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110001868033",
+    "FacilityName": "BEST ASPHALT, INC.",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110005062145",
+    "FacilityName": "BIRDWELL CLEANING PRODUCTS INC",
+    "City": "KEENE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110008169695",
+    "FacilityName": "BURKS-PLIHAL COMPANY INC",
+    "City": "JOSHUA",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110037850992",
+    "FacilityName": "BURNETT OIL DECLEVA COMPRESSOR STATION",
+    "City": "KEENE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110030463530",
+    "FacilityName": "CHESAPEAK GAS WELL",
+    "City": "KEENE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110037532596",
+    "FacilityName": "CHISHOLM TRAIL WASTE WATER DISPOSAL",
+    "City": "JOSHUA",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110062229066",
+    "FacilityName": "CITY OF CLEBURNE WATER REUSE FACILITY",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110072281733",
+    "FacilityName": "CLEBURNE ELECTRIC AND GAS COMPANY",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110009504170",
+    "FacilityName": "CLEBURNE MOTOR CO INC",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110034660917",
+    "FacilityName": "CLEBURNE MOTOR CO INC",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110070198031",
+    "FacilityName": "CLEBURNE PROPANE AND CHEMICAL INC",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110070173159",
+    "FacilityName": "CUDE OIL FIELD CONTRACTORS",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110008147166",
+    "FacilityName": "DELCO FIBERGLASS PRODUCTS INC",
+    "City": "JOSHUA",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110028253994",
+    "FacilityName": "DEVON ENERGY",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110005046789",
+    "FacilityName": "DIESEL INDUSTRIAL TRACTOR INC",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110000458978",
+    "FacilityName": "DPC INDS  INC",
+    "City": "CLEBURNE",
+    "PermitCount": 9,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110033824958",
+    "FacilityName": "FALCON CREST WATER SYSTEM",
+    "City": "JOSHUA",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110071347584",
+    "FacilityName": "GE OIL & GAS PRESSURE CONTROL",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110061463973",
+    "FacilityName": "GROUNDWATER PLANT #10",
+    "City": "JOSHUA",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110071645925",
+    "FacilityName": "HADLEY 124 WASTEWATER TREATMENT PLANT",
+    "City": "JOSHUA",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110035783532",
+    "FacilityName": "HALLWOOD SWD FACILITY",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110033931431",
+    "FacilityName": "HYDE PLASTICS EQUIPMENT INC",
+    "City": "JOSHUA",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110005045977",
+    "FacilityName": "INDUSTRIAL SCREW CONVEYOR INC",
+    "City": "BURLESON",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110005145814",
+    "FacilityName": "INTERNATIONAL BIOMEDICAL INC",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110071161032",
+    "FacilityName": "JAMES HARDIE BUILDING PRODUCTS, INC. (CLEB)",
+    "City": "CLEBURNE",
+    "PermitCount": 3,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110034061707",
+    "FacilityName": "JCS WASTEWATER",
+    "City": "JOSHUA",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110033728045",
+    "FacilityName": "JOHNSON COUNTY FRESH WATER SUPPLY DISTRICT 1 WATER DISTRIBUTION SYSTEM",
+    "City": "JOSHUA",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110033790798",
+    "FacilityName": "JOHNSON COUNTY PRECINCT 2",
+    "City": "JOSHUA",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110037843466",
+    "FacilityName": "JOHNSON NO 3 SALTWATER INJECTION WELL",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110072076237",
+    "FacilityName": "KMP CORPORATION HEADQUARTERS",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110028078997",
+    "FacilityName": "LAMBERT OIL COMPANY",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110034004645",
+    "FacilityName": "LONE STAR GAS",
+    "City": "JOSHUA",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110011448763",
+    "FacilityName": "MARTI ELECTRONICS INC",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110070280424",
+    "FacilityName": "MCCLINTON ENERGY GROUP",
+    "City": "JOSHUA",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110034897734",
+    "FacilityName": "MIDLOTHIAN WATER DISTRICT BLU",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110008141171",
+    "FacilityName": "NOAKS INC",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110068040211",
+    "FacilityName": "PARKER HANNIFIN CORP HPD - CL",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110005138911",
+    "FacilityName": "PETRO RUBBER PRODUCTS INC",
+    "City": "JOSHUA",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110070168287",
+    "FacilityName": "PIONEER OIL",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110070165773",
+    "FacilityName": "PIONEER OIL 31",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110063844130",
+    "FacilityName": "RED GIANT OIL",
+    "City": "JOSHUA",
+    "PermitCount": 4,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110005104047",
+    "FacilityName": "RYDER TRUCK RENTAL INC",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110000459003",
+    "FacilityName": "SACHEM INC",
+    "City": "CLEBURNE",
+    "PermitCount": 11,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110070241873",
+    "FacilityName": "SMITHFIELD BIOENERGY CLEBURNE PLANT",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110028084640",
+    "FacilityName": "SOUTH CLEBURNE SWD",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110070435050",
+    "FacilityName": "SPARKS DRIVE SWD",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110035340379",
+    "FacilityName": "SPARKS DRIVE SWD INC",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110070293244",
+    "FacilityName": "SUPREME CORPORATION",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110035336525",
+    "FacilityName": "TERRYS TIRES & WHEELS INC",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110035258002",
+    "FacilityName": "TRINITY MATERIALS INC CLEBURNE 299",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110038424719",
+    "FacilityName": "TXU PIPELINE SERVICES",
+    "City": "JOSHUA",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110071182065",
+    "FacilityName": "WABASH NATIONAL CORPORATION - PLANT 5",
+    "City": "CLEBURNE",
+    "PermitCount": 3,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110011415325",
+    "FacilityName": "WALL INDUSTRIES INC",
+    "City": "CLEBURNE",
+    "PermitCount": 1,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  },
+  {
+    "RegistryId": "110005041828",
+    "FacilityName": "WRIGHT LINCOLN MERCURY",
+    "City": "CLEBURNE",
+    "PermitCount": 2,
+    "PermitSystems": [],
+    "FormalActionsCount": 0,
+    "ViolationsCount": 0,
+    "ComplianceStatus": "N/A"
+  }
+]
