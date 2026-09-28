@@ -1,0 +1,45 @@
+name: Verify Master Ledger Integrity
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  verify-ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Execute Cryptographic Seal Audit
+        run: |
+          python3 -c '
+          import json
+          import hashlib
+          import sys
+
+          try:
+              with open("earmark_routing_manifest.json", "r") as f:
+                  manifest = json.load(f)
+              
+              stored_seal = manifest.pop("cryptographic_seal", None)
+              payload_string = json.dumps(manifest, sort_keys=True)
+              computed_seal = hashlib.sha256(payload_string.encode("utf-8")).hexdigest()
+              
+              if stored_seal == computed_seal:
+                  print(f"[+] Remote Integrity Verified: Seal matches {computed_seal[:16]}...")
+                  sys.exit(0)
+              else:
+                  print(f"[!] Integrity Failure! Stored: {stored_seal}, Computed: {computed_seal}")
+                  sys.exit(1)
+          except Exception as e:
+              print(f"[!] Audit Exception: {e}")
+              sys.exit(1)
+          '
