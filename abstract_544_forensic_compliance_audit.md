@@ -1,0 +1,79 @@
+# Abstract 544 (Johnson County, TX) Environmental Audit Ledger
+**Target Vector:** Silas Elbert Bandy Survey (Abstract 544) | 5-Mile Buffer Zone
+**Dataset Source:** EPA ECHO DFR REST Endpoint (`echodata.epa.gov`)
+
+## 1. Executive Summary
+- **Total Facilities Audited:** 56
+- **Total Regulatory Permits Recorded:** 104
+- **Enforcement Actions / Active SNC Flags:** 0 (Current Quarter)
+
+## 2. Statutory Regulatory Distribution
+| Environmental Statute | Program Scope | Total Permitted Records |
+| --- | --- | --- |
+| **FRS / Unassigned** | Facility Registry Service Base Geographic Profile | 64 |
+| **RCRA** | Resource Conservation & Recovery Act (Hazardous Waste) | 16 |
+| **CAA** | Clean Air Act (Air Emissions) | 8 |
+| **CWA** | Clean Water Act (NPDES / Water Discharges) | 7 |
+| **TSCA** | Toxic Substances Control Act | 6 |
+| **EP313** | Emergency Planning & Community Right-to-Know Act (TRI) | 2 |
+| **CERCLA** | Superfund / Hazardous Substance Releases | 1 |
+
+## 3. High-Priority Facility Inventory Matrix
+| Registry ID | Facility Name | City | Permits | Program Statutes | EPA Systems |
+| --- | --- | --- | --- | --- | --- |
+| `110070281248` | 4C LONE STAR RANCH & OUTDOORS, INC. | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110005153430` | ATLAS MACHINE & WELDING SERVICE INC | JOSHUA | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110001868033` | BEST ASPHALT, INC. | CLEBURNE | 2 | CAA, FRS / Unassigned | FRS, ICIS-Air |
+| `110005062145` | BIRDWELL CLEANING PRODUCTS INC | KEENE | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110008169695` | BURKS-PLIHAL COMPANY INC | JOSHUA | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110037850992` | BURNETT OIL DECLEVA COMPRESSOR STATION | KEENE | 1 | FRS / Unassigned | FRS |
+| `110030463530` | CHESAPEAK GAS WELL | KEENE | 2 | FRS / Unassigned | FRS, ICIS |
+| `110037532596` | CHISHOLM TRAIL WASTE WATER DISPOSAL | JOSHUA | 1 | FRS / Unassigned | FRS |
+| `110062229066` | CITY OF CLEBURNE WATER REUSE FACILITY | CLEBURNE | 2 | CAA, FRS / Unassigned | FRS, RMP |
+| `110072281733` | CLEBURNE ELECTRIC AND GAS COMPANY | CLEBURNE | 2 | CERCLA, FRS / Unassigned | FRS, SEMS |
+| `110009504170` | CLEBURNE MOTOR CO INC | CLEBURNE | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110034660917` | CLEBURNE MOTOR CO INC | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110070198031` | CLEBURNE PROPANE AND CHEMICAL INC | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110070173159` | CUDE OIL FIELD CONTRACTORS | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110008147166` | DELCO FIBERGLASS PRODUCTS INC | JOSHUA | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110028253994` | DEVON ENERGY | CLEBURNE | 2 | FRS / Unassigned | FRS, ICIS |
+| `110005046789` | DIESEL INDUSTRIAL TRACTOR INC | CLEBURNE | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110000458978` | DPC INDS  INC | CLEBURNE | 9 | CAA, EP313, FRS / Unassigned, RCRA, TSCA | EIS, FRS, ICIS, RCRAInfo, RMP, TRI, TSCA |
+| `110033824958` | FALCON CREST WATER SYSTEM | JOSHUA | 1 | FRS / Unassigned | FRS |
+| `110071347584` | GE OIL & GAS PRESSURE CONTROL | CLEBURNE | 2 | CWA, FRS / Unassigned | FRS, ICIS-NPDES |
+| `110061463973` | GROUNDWATER PLANT #10 | JOSHUA | 1 | FRS / Unassigned | FRS |
+| `110071645925` | HADLEY 124 WASTEWATER TREATMENT PLANT | JOSHUA | 2 | CWA, FRS / Unassigned | FRS, ICIS-NPDES |
+| `110035783532` | HALLWOOD SWD FACILITY | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110033931431` | HYDE PLASTICS EQUIPMENT INC | JOSHUA | 1 | FRS / Unassigned | FRS |
+| `110005045977` | INDUSTRIAL SCREW CONVEYOR INC | BURLESON | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110005145814` | INTERNATIONAL BIOMEDICAL INC | CLEBURNE | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110071161032` | JAMES HARDIE BUILDING PRODUCTS, INC. (CLEB) | CLEBURNE | 3 | CAA, FRS / Unassigned | CEDRI, FRS, GHGRP |
+| `110034061707` | JCS WASTEWATER | JOSHUA | 1 | FRS / Unassigned | FRS |
+| `110033728045` | JOHNSON COUNTY FRESH WATER SUPPLY DISTRICT 1 WATER DISTRIBUTION SYSTEM | JOSHUA | 1 | FRS / Unassigned | FRS |
+| `110033790798` | JOHNSON COUNTY PRECINCT 2 | JOSHUA | 1 | FRS / Unassigned | FRS |
+| `110037843466` | JOHNSON NO 3 SALTWATER INJECTION WELL | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110072076237` | KMP CORPORATION HEADQUARTERS | CLEBURNE | 2 | CWA, FRS / Unassigned | FRS, ICIS-NPDES |
+| `110028078997` | LAMBERT OIL COMPANY | CLEBURNE | 2 | FRS / Unassigned | FRS, ICIS |
+| `110034004645` | LONE STAR GAS | JOSHUA | 1 | FRS / Unassigned | FRS |
+| `110011448763` | MARTI ELECTRONICS INC | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110070280424` | MCCLINTON ENERGY GROUP | JOSHUA | 1 | FRS / Unassigned | FRS |
+| `110034897734` | MIDLOTHIAN WATER DISTRICT BLU | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110008141171` | NOAKS INC | CLEBURNE | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110068040211` | PARKER HANNIFIN CORP HPD - CL | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110005138911` | PETRO RUBBER PRODUCTS INC | JOSHUA | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110070168287` | PIONEER OIL | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110070165773` | PIONEER OIL 31 | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110063844130` | RED GIANT OIL | JOSHUA | 4 | CWA, FRS / Unassigned, RCRA | FRS, ICIS-NPDES, RCRAInfo |
+| `110005104047` | RYDER TRUCK RENTAL INC | CLEBURNE | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110000459003` | SACHEM INC | CLEBURNE | 11 | CAA, EP313, FRS / Unassigned, RCRA, TSCA | EIS, FRS, ICIS, RCRAInfo, RMP, TRI, TSCA |
+| `110070241873` | SMITHFIELD BIOENERGY CLEBURNE PLANT | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110028084640` | SOUTH CLEBURNE SWD | CLEBURNE | 2 | FRS / Unassigned | FRS, ICIS |
+| `110070435050` | SPARKS DRIVE SWD | CLEBURNE | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
+| `110035340379` | SPARKS DRIVE SWD INC | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110070293244` | SUPREME CORPORATION | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110035336525` | TERRYS TIRES & WHEELS INC | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110035258002` | TRINITY MATERIALS INC CLEBURNE 299 | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110038424719` | TXU PIPELINE SERVICES | JOSHUA | 1 | FRS / Unassigned | FRS |
+| `110071182065` | WABASH NATIONAL CORPORATION - PLANT 5 | CLEBURNE | 3 | CWA, FRS / Unassigned | FRS, ICIS-NPDES |
+| `110011415325` | WALL INDUSTRIES INC | CLEBURNE | 1 | FRS / Unassigned | FRS |
+| `110005041828` | WRIGHT LINCOLN MERCURY | CLEBURNE | 2 | FRS / Unassigned, RCRA | FRS, RCRAInfo |
