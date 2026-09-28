@@ -1,0 +1,1123 @@
+{
+  "type": "FeatureCollection",
+  "name": "Abstract_544_Facilities_Audit_Layer",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.38,
+          32.42
+        ]
+      },
+      "properties": {
+        "target_id": "ABSTRACT_544",
+        "name": "Silas Elbert Bandy Survey (Abstract 544) Centroid",
+        "county": "Johnson County, TX",
+        "type": "Survey Reference Centroid"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.41128,
+          32.38581
+        ]
+      },
+      "properties": {
+        "registry_id": "110070281248",
+        "facility_name": "4C LONE STAR RANCH & OUTDOORS, INC.",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.38451,
+          32.45152
+        ]
+      },
+      "properties": {
+        "registry_id": "110005153430",
+        "facility_name": "ATLAS MACHINE & WELDING SERVICE INC",
+        "city": "JOSHUA",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.38832,
+          32.39469
+        ]
+      },
+      "properties": {
+        "registry_id": "110001868033",
+        "facility_name": "BEST ASPHALT, INC.",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "CAA",
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.322102,
+          32.391778
+        ]
+      },
+      "properties": {
+        "registry_id": "110005062145",
+        "facility_name": "BIRDWELL CLEANING PRODUCTS INC",
+        "city": "KEENE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.37438,
+          32.488686
+        ]
+      },
+      "properties": {
+        "registry_id": "110008169695",
+        "facility_name": "BURKS-PLIHAL COMPANY INC",
+        "city": "JOSHUA",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.3,
+          32.4166
+        ]
+      },
+      "properties": {
+        "registry_id": "110037850992",
+        "facility_name": "BURNETT OIL DECLEVA COMPRESSOR STATION",
+        "city": "KEENE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.3265,
+          32.39168
+        ]
+      },
+      "properties": {
+        "registry_id": "110030463530",
+        "facility_name": "CHESAPEAK GAS WELL",
+        "city": "KEENE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.443333,
+          32.443333
+        ]
+      },
+      "properties": {
+        "registry_id": "110037532596",
+        "facility_name": "CHISHOLM TRAIL WASTE WATER DISPOSAL",
+        "city": "JOSHUA",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.40944,
+          32.40109
+        ]
+      },
+      "properties": {
+        "registry_id": "110062229066",
+        "facility_name": "CITY OF CLEBURNE WATER REUSE FACILITY",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "CAA",
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.383402,
+          32.352834
+        ]
+      },
+      "properties": {
+        "registry_id": "110072281733",
+        "facility_name": "CLEBURNE ELECTRIC AND GAS COMPANY",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "CERCLA",
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.38356,
+          32.42167
+        ]
+      },
+      "properties": {
+        "registry_id": "110009504170",
+        "facility_name": "CLEBURNE MOTOR CO INC",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.39515,
+          32.37303
+        ]
+      },
+      "properties": {
+        "registry_id": "110034660917",
+        "facility_name": "CLEBURNE MOTOR CO INC",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.410249,
+          32.362004
+        ]
+      },
+      "properties": {
+        "registry_id": "110070198031",
+        "facility_name": "CLEBURNE PROPANE AND CHEMICAL INC",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.40462,
+          32.37813
+        ]
+      },
+      "properties": {
+        "registry_id": "110070173159",
+        "facility_name": "CUDE OIL FIELD CONTRACTORS",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.384462,
+          32.462682
+        ]
+      },
+      "properties": {
+        "registry_id": "110008147166",
+        "facility_name": "DELCO FIBERGLASS PRODUCTS INC",
+        "city": "JOSHUA",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.394892,
+          32.366773
+        ]
+      },
+      "properties": {
+        "registry_id": "110028253994",
+        "facility_name": "DEVON ENERGY",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.38596,
+          32.39895
+        ]
+      },
+      "properties": {
+        "registry_id": "110005046789",
+        "facility_name": "DIESEL INDUSTRIAL TRACTOR INC",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.40696,
+          32.38577
+        ]
+      },
+      "properties": {
+        "registry_id": "110000458978",
+        "facility_name": "DPC INDS  INC",
+        "city": "CLEBURNE",
+        "permit_count": 9,
+        "statutes": [
+          "CAA",
+          "EP313",
+          "FRS / Unassigned",
+          "RCRA",
+          "TSCA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.322525,
+          32.457286
+        ]
+      },
+      "properties": {
+        "registry_id": "110033824958",
+        "facility_name": "FALCON CREST WATER SYSTEM",
+        "city": "JOSHUA",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.407633,
+          32.386267
+        ]
+      },
+      "properties": {
+        "registry_id": "110071347584",
+        "facility_name": "GE OIL & GAS PRESSURE CONTROL",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "CWA",
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.35283,
+          32.43325
+        ]
+      },
+      "properties": {
+        "registry_id": "110061463973",
+        "facility_name": "GROUNDWATER PLANT #10",
+        "city": "JOSHUA",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.425406,
+          32.433928
+        ]
+      },
+      "properties": {
+        "registry_id": "110071645925",
+        "facility_name": "HADLEY 124 WASTEWATER TREATMENT PLANT",
+        "city": "JOSHUA",
+        "permit_count": 2,
+        "statutes": [
+          "CWA",
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.40373,
+          32.40101
+        ]
+      },
+      "properties": {
+        "registry_id": "110035783532",
+        "facility_name": "HALLWOOD SWD FACILITY",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.38265,
+          32.47373
+        ]
+      },
+      "properties": {
+        "registry_id": "110033931431",
+        "facility_name": "HYDE PLASTICS EQUIPMENT INC",
+        "city": "JOSHUA",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.31624,
+          32.45885
+        ]
+      },
+      "properties": {
+        "registry_id": "110005045977",
+        "facility_name": "INDUSTRIAL SCREW CONVEYOR INC",
+        "city": "BURLESON",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.390442,
+          32.388527
+        ]
+      },
+      "properties": {
+        "registry_id": "110005145814",
+        "facility_name": "INTERNATIONAL BIOMEDICAL INC",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.40798,
+          32.40107
+        ]
+      },
+      "properties": {
+        "registry_id": "110071161032",
+        "facility_name": "JAMES HARDIE BUILDING PRODUCTS, INC. (CLEB)",
+        "city": "CLEBURNE",
+        "permit_count": 3,
+        "statutes": [
+          "CAA",
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.355667,
+          32.433233
+        ]
+      },
+      "properties": {
+        "registry_id": "110034061707",
+        "facility_name": "JCS WASTEWATER",
+        "city": "JOSHUA",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.375,
+          32.45833
+        ]
+      },
+      "properties": {
+        "registry_id": "110033728045",
+        "facility_name": "JOHNSON COUNTY FRESH WATER SUPPLY DISTRICT 1 WATER DISTRIBUTION SYSTEM",
+        "city": "JOSHUA",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.38841,
+          32.461382
+        ]
+      },
+      "properties": {
+        "registry_id": "110033790798",
+        "facility_name": "JOHNSON COUNTY PRECINCT 2",
+        "city": "JOSHUA",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.421243,
+          32.363038
+        ]
+      },
+      "properties": {
+        "registry_id": "110037843466",
+        "facility_name": "JOHNSON NO 3 SALTWATER INJECTION WELL",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.38917,
+          32.37486
+        ]
+      },
+      "properties": {
+        "registry_id": "110072076237",
+        "facility_name": "KMP CORPORATION HEADQUARTERS",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "CWA",
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.3811,
+          32.348987
+        ]
+      },
+      "properties": {
+        "registry_id": "110028078997",
+        "facility_name": "LAMBERT OIL COMPANY",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.377636,
+          32.466752
+        ]
+      },
+      "properties": {
+        "registry_id": "110034004645",
+        "facility_name": "LONE STAR GAS",
+        "city": "JOSHUA",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.39461,
+          32.36633
+        ]
+      },
+      "properties": {
+        "registry_id": "110011448763",
+        "facility_name": "MARTI ELECTRONICS INC",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.431895,
+          32.411405
+        ]
+      },
+      "properties": {
+        "registry_id": "110070280424",
+        "facility_name": "MCCLINTON ENERGY GROUP",
+        "city": "JOSHUA",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.321997,
+          32.376476
+        ]
+      },
+      "properties": {
+        "registry_id": "110034897734",
+        "facility_name": "MIDLOTHIAN WATER DISTRICT BLU",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.380713,
+          32.348751
+        ]
+      },
+      "properties": {
+        "registry_id": "110008141171",
+        "facility_name": "NOAKS INC",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.390248,
+          32.389157
+        ]
+      },
+      "properties": {
+        "registry_id": "110068040211",
+        "facility_name": "PARKER HANNIFIN CORP HPD - CL",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.38426,
+          32.44132
+        ]
+      },
+      "properties": {
+        "registry_id": "110005138911",
+        "facility_name": "PETRO RUBBER PRODUCTS INC",
+        "city": "JOSHUA",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.39137,
+          32.38545
+        ]
+      },
+      "properties": {
+        "registry_id": "110070168287",
+        "facility_name": "PIONEER OIL",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.380444,
+          32.348794
+        ]
+      },
+      "properties": {
+        "registry_id": "110070165773",
+        "facility_name": "PIONEER OIL 31",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.439401,
+          32.414832
+        ]
+      },
+      "properties": {
+        "registry_id": "110063844130",
+        "facility_name": "RED GIANT OIL",
+        "city": "JOSHUA",
+        "permit_count": 4,
+        "statutes": [
+          "CWA",
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.384309,
+          32.429153
+        ]
+      },
+      "properties": {
+        "registry_id": "110005104047",
+        "facility_name": "RYDER TRUCK RENTAL INC",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.39788,
+          32.38926
+        ]
+      },
+      "properties": {
+        "registry_id": "110000459003",
+        "facility_name": "SACHEM INC",
+        "city": "CLEBURNE",
+        "permit_count": 11,
+        "statutes": [
+          "CAA",
+          "EP313",
+          "FRS / Unassigned",
+          "RCRA",
+          "TSCA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.430512,
+          32.399258
+        ]
+      },
+      "properties": {
+        "registry_id": "110070241873",
+        "facility_name": "SMITHFIELD BIOENERGY CLEBURNE PLANT",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.39972,
+          32.38337
+        ]
+      },
+      "properties": {
+        "registry_id": "110028084640",
+        "facility_name": "SOUTH CLEBURNE SWD",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.40373,
+          32.40101
+        ]
+      },
+      "properties": {
+        "registry_id": "110070435050",
+        "facility_name": "SPARKS DRIVE SWD",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.419166,
+          32.403888
+        ]
+      },
+      "properties": {
+        "registry_id": "110035340379",
+        "facility_name": "SPARKS DRIVE SWD INC",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.39947,
+          32.39254
+        ]
+      },
+      "properties": {
+        "registry_id": "110070293244",
+        "facility_name": "SUPREME CORPORATION",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.36074,
+          32.35977
+        ]
+      },
+      "properties": {
+        "registry_id": "110035336525",
+        "facility_name": "TERRYS TIRES & WHEELS INC",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.34555,
+          32.37459
+        ]
+      },
+      "properties": {
+        "registry_id": "110035258002",
+        "facility_name": "TRINITY MATERIALS INC CLEBURNE 299",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.377636,
+          32.466752
+        ]
+      },
+      "properties": {
+        "registry_id": "110038424719",
+        "facility_name": "TXU PIPELINE SERVICES",
+        "city": "JOSHUA",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.3893,
+          32.38542
+        ]
+      },
+      "properties": {
+        "registry_id": "110071182065",
+        "facility_name": "WABASH NATIONAL CORPORATION - PLANT 5",
+        "city": "CLEBURNE",
+        "permit_count": 3,
+        "statutes": [
+          "CWA",
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.395926,
+          32.370447
+        ]
+      },
+      "properties": {
+        "registry_id": "110011415325",
+        "facility_name": "WALL INDUSTRIES INC",
+        "city": "CLEBURNE",
+        "permit_count": 1,
+        "statutes": [
+          "FRS / Unassigned"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -97.39515,
+          32.37303
+        ]
+      },
+      "properties": {
+        "registry_id": "110005041828",
+        "facility_name": "WRIGHT LINCOLN MERCURY",
+        "city": "CLEBURNE",
+        "permit_count": 2,
+        "statutes": [
+          "FRS / Unassigned",
+          "RCRA"
+        ]
+      }
+    }
+  ]
+}
