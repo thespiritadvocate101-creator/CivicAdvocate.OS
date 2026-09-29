@@ -34,7 +34,7 @@ jobs:
           FAILED=0
           PASSED=0
 
-          # Locate all JSON and GeoJSON files in the repository
+          # Locate all core JSON and GeoJSON files, explicitly excluding submodules/vendor directories
           while IFS= read -r file; do
             echo "Auditing: $file"
             
@@ -53,7 +53,7 @@ jobs:
             echo "  [+] Canonical SHA-512 : $CANONICAL_HASH"
 
             PASSED=$((PASSED + 1))
-          done < <(find . -type f \( -name "*.json" -o -name "*.geojson" \) -not -path "*/.*")
+          done < <(find . -type f \( -name "*.json" -o -name "*.geojson" \) -not -path "*/.*" -not -path "./llama.cpp*")
 
           echo "=================================================="
           echo "Verification Complete: $PASSED passed, $FAILED failed."
