@@ -1,0 +1,103 @@
+name: Verify Sovereign Ledger & Publish JSON-LD
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  verify-and-build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install System Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sqlite3 openssl coreutils jq python3
+
+      - name: Make Control Plane Executable
+        run: chmod +x sovereign_control_plane.sh
+
+      - name: Run Sovereign Control Plane Verification Engine
+        run: |
+          ./sovereign_control_plane.sh
+
+      - name: Verify JSON-LD Schema & Integrity
+        run: |
+          if [ ! -f "ledger_export.jsonld" ]; then
+            echo "Error: ledger_export.jsonld was not generated."
+            exit 1
+          fi
+          jq . ledger_export.jsonld > /dev/null
+          echo "[CI] JSON-LD valid and parsed successfully."
+
+      - name: Upload Ledger Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: verifiable-ledger-jsonld
+          path: ledger_export.jsonld
+          if-no-files-found: error
+
+      - name: Setup Pages
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        uses: actions/configure-pages@v5
+
+      - name: Stage Artifacts for GitHub Pages
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        run: |
+          mkdir -p public
+          cp ledger_export.jsonld public/index.jsonld
+          cp ledger_export.jsonld public/
+          
+          # Optional summary page
+          cat <<HTML > public/index.html
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <title>CivicAdvocate.OS - Verifiable Audit Ledger</title>
+            <style>
+              body { font-family: monospace; background: #0f172a; color: #f8fafc; padding: 2rem; }
+              a { color: #38bdf8; }
+              pre { background: #1e293b; padding: 1rem; border-radius: 8px; overflow-x: auto; }
+            </style>
+          </head>
+          <body>
+            <h1>CivicAdvocate.OS Audit Ledger</h1>
+            <p>Status: <strong>VERIFIED (SHA-512)</strong></p>
+            <p>Raw JSON-LD Export: <a href="ledger_export.jsonld">ledger_export.jsonld</a></p>
+          </body>
+          </html>
+          HTML
+
+      - name: Upload Pages Artifact
+        if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public/
+
+  deploy-pages:
+    needs: verify-and-build
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
