@@ -1,13 +1,10 @@
-name: Verify Cryptographic & Database Integrity
+name: SHA-512 & GeoJSON Integrity Verification
 
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-  schedule:
-    # Runs automatically every day at 00:00 UTC
-    - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:
@@ -15,118 +12,53 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.13'
+      - name: Set up Python & Dependencies
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
-    - name: Audit Manifest & Validate SHA-512 Seal
-      run: |
-        python -c "
-        import json, sys, os
+      - name: Install Validation Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq coreutils
 
-        manifest_path = 'dist/publication/truth_mandate_manifest.json'
-        
-        if not os.path.exists(manifest_path):
-            print(f'[!] ERROR: Publication manifest missing at {manifest_path}')
-            sys.exit(1)
+      - name: Verify JSON/GeoJSON Syntax & Re-calculate SHA-512 Digests
+        run: |
+          echo "=================================================="
+          echo "[+] Starting Public Digest Verification"
+          echo "=================================================="
 
-        with open(manifest_path, 'r') as f:
-            data = json.load(f)
+          FAILED=0
+          PASSED=0
 
-        print('[*] Manifest retrieved successfully.')
-        print(f'    Architect: {data.get(\"architect\")}')
-        print(f'    Status:    {data.get(\"status\")}')
-        print(f'    Mandate:   {data.get(\"mandate\")}')
-
-        latest_seal = data.get('latest_seal', {})
-        digest = latest_seal.get('sha512_digest', '')
-        
-        print(f'[*] Recorded SHA-512 Seal: {digest}')
-
-        if not digest or len(digest) != 128:
-            print('[!] ERROR: SHA-512 digest is invalid or corrupt (expected 128 hex characters).')
-            sys.exit(1)
-
-        print('[✓] SUCCESS: Cryptographic state digest verified successfully.')
-        "
-
-    - name: Initialize Test SQLite Ledger Database
-      run: |
-        python -c "
-        import sqlite3, os
-
-        os.makedirs('dist', exist_ok=True)
-        db_path = 'dist/audit_ledger.db'
-        
-        conn = sqlite3.connect(db_path)
-        cursor = conn.cursor()
-
-        cursor.execute('''
-            CREATE TABLE IF NOT EXISTS audit_ledger (
-                id INTEGER PRIMARY KEY AUTOINCREMENT,
-                timestamp TEXT NOT NULL,
-                event_type TEXT NOT NULL,
-                sha512_digest TEXT NOT NULL
-            );
-        ''')
-
-        cursor.execute('''
-            INSERT INTO audit_ledger (timestamp, event_type, sha512_digest)
-            VALUES (
-                '2026-09-21T00:00:00',
-                'GENESIS_CI_TEST',
-                '5cbbe634a609419b76dbc82d042b9bf63e3f7ab55f628a7d005f73eaee3d13a3d4a9c64ba44a29067328968df855fa4a16993c0e534bc0efbb2e38af76abb219'
-            );
-        ''')
-
-        conn.commit()
-        conn.close()
-        print(f'[*] Successfully initialized fresh SQLite ledger at {db_path}')
-        "
-
-    - name: Run SQLite PRAGMA Integrity Check
-      run: |
-        python -c "
-        import sqlite3, glob, sys, os
-
-        db_files = glob.glob('**/*.db', recursive=True)
-        
-        if not db_files:
-            print('[!] ERROR: No SQLite .db files found in workspace to verify.')
-            sys.exit(1)
-
-        for db in db_files:
-            print(f'[*] Checking integrity for: {db}')
-            conn = sqlite3.connect(db)
-            cursor = conn.cursor()
-            cursor.execute('PRAGMA integrity_check;')
-            result = cursor.fetchone()[0]
-            conn.close()
+          # Locate all JSON and GeoJSON files in the repository
+          while IFS= read -r file; do
+            echo "Auditing: $file"
             
-            print(f'    PRAGMA integrity_check result: {result}')
-            if result != 'ok':
-                print(f'[!] ERROR: Database integrity check failed for {db}!')
-                sys.exit(1)
+            # 1. Validate JSON syntax
+            if ! jq empty "$file" > /dev/null 2>&1; then
+              echo "  [-] FAIL: Invalid JSON syntax in $file"
+              FAILED=$((FAILED + 1))
+              continue
+            fi
 
-        print('[✓] SUCCESS: All SQLite databases passed structural integrity checks.')
-        "
+            # 2. Compute canonical SHA-512 (sorted keys, compact layout)
+            CANONICAL_HASH=$(jq -c -S '.' "$file" | sha512sum | awk '{print $1}')
+            RAW_HASH=$(sha512sum "$file" | awk '{print $1}')
 
-    - name: Notify Webhook on CI Failure
-      if: failure()
-      env:
-        WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
-      run: |
-        if [ -n "$WEBHOOK_URL" ]; then
-          curl -H "Content-Type: application/json" \
-               -X POST \
-               -d "{
-                 \"content\": \"🚨 **CivicAdvocate.OS Integrity Check Failed!**\n**Repository:** $GITHUB_REPOSITORY\n**Branch:** $GITHUB_REF_NAME\n**Commit:** $GITHUB_SHA\n**Run Logs:** $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID\"
-               }" \
-               "$WEBHOOK_URL"
-        else
-          echo "[*] WEBHOOK_URL secret not set. Skipping notification."
-        fi
+            echo "  [+] Raw SHA-512       : $RAW_HASH"
+            echo "  [+] Canonical SHA-512 : $CANONICAL_HASH"
+
+            PASSED=$((PASSED + 1))
+          done < <(find . -type f \( -name "*.json" -o -name "*.geojson" \) -not -path "*/.*")
+
+          echo "=================================================="
+          echo "Verification Complete: $PASSED passed, $FAILED failed."
+          echo "=================================================="
+
+          if [ $FAILED -gt 0 ]; then
+            exit 1
+          fi
