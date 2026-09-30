@@ -1,0 +1,165 @@
+import hashlib
+import hmac
+import json
+import sqlite3
+import time
+from dataclasses import asdict, dataclass
+from typing import Any, Dict, Optional
+
+
+@dataclass
+class CovenantRule:
+    rule_id: str
+    allowed_action: str
+    max_payload_bytes: int
+    require_signature: bool
+
+
+class CovenantEnforcer:
+    """Validates execution intents against non-negotiable contract rules."""
+    
+    def __init__(self, secret_key: bytes):
+        self.secret_key = secret_key
+        self.rules: Dict[str, CovenantRule] = {}
+
+    def register_rule(self, rule: CovenantRule) -> None:
+        self.rules[rule.rule_id] = rule
+
+    def compute_sha512(self, payload: Dict[str, Any]) -> str:
+        serialized = json.dumps(payload, sort_keys=True).encode("utf-8")
+        return hashlib.sha512(serialized).hexdigest()
+
+    def generate_signature(self, payload_hash: str) -> str:
+        return hmac.new(
+            self.secret_key, payload_hash.encode("utf-8"), hashlib.sha512
+        ).hexdigest()
+
+    def validate_intent(
+        self,
+        rule_id: str,
+        action: str,
+        payload: Dict[str, Any],
+        signature: Optional[str] = None,
+    ) -> bool:
+        if rule_id not in self.rules:
+            raise PermissionError(f"Covenant Rule '{rule_id}' not found.")
+
+        rule = self.rules[rule_id]
+
+        if rule.allowed_action != action:
+            raise PermissionError(f"Action '{action}' violates Covenant Rule '{rule_id}'.")
+
+        payload_bytes = len(json.dumps(payload).encode("utf-8"))
+        if payload_bytes > rule.max_payload_bytes:
+            raise ValueError(f"Payload size ({payload_bytes}B) exceeds rule limit ({rule.max_payload_bytes}B).")
+
+        payload_hash = self.compute_sha512(payload)
+
+        if rule.require_signature:
+            if not signature:
+                raise PermissionError("Signature required by Covenant Rule.")
+            expected_sig = self.generate_signature(payload_hash)
+            if not hmac.compare_digest(expected_sig, signature):
+                raise PermissionError("Cryptographic signature verification failed.")
+
+        return True
+
+
+class SovereignControlPlane:
+    """Zero-dependency local control plane and append-only audit ledger."""
+
+    def __init__(self, db_path: str = ":memory:"):
+        self.conn = sqlite3.connect(db_path)
+        self._init_ledger()
+
+    def _init_ledger(self) -> None:
+        with self.conn:
+            self.conn.execute("""
+                CREATE TABLE IF NOT EXISTS audit_ledger (
+                    sequence_id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    timestamp REAL NOT NULL,
+                    action TEXT NOT NULL,
+                    payload_hash TEXT NOT NULL,
+                    previous_hash TEXT NOT NULL,
+                    entry_hash TEXT NOT NULL
+                );
+            """)
+
+    def get_last_hash(self) -> str:
+        cursor = self.conn.cursor()
+        cursor.execute("SELECT entry_hash FROM audit_ledger ORDER BY sequence_id DESC LIMIT 1;")
+        row = cursor.fetchone()
+        return row[0] if row else "0" * 128  # Genesis root hash (SHA-512 length)
+
+    def record_execution(self, action: str, payload_hash: str) -> str:
+        prev_hash = self.get_last_hash()
+        ts = time.time()
+        
+        # Hash chaining formula: SHA-512(ts + action + payload_hash + prev_hash)
+        chain_string = f"{ts}:{action}:{payload_hash}:{prev_hash}".encode("utf-8")
+        entry_hash = hashlib.sha512(chain_string).hexdigest()
+
+        with self.conn:
+            self.conn.execute(
+                """
+                INSERT INTO audit_ledger (timestamp, action, payload_hash, previous_hash, entry_hash)
+                VALUES (?, ?, ?, ?, ?)
+                """,
+                (ts, action, payload_hash, prev_hash, entry_hash),
+            )
+        return entry_hash
+
+    def verify_ledger_integrity(self) -> bool:
+        cursor = self.conn.cursor()
+        cursor.execute("SELECT sequence_id, timestamp, action, payload_hash, previous_hash, entry_hash FROM audit_ledger ORDER BY sequence_id ASC;")
+        rows = cursor.fetchall()
+
+        expected_prev_hash = "0" * 128
+        for row in rows:
+            seq_id, ts, action, payload_hash, prev_hash, entry_hash = row
+            if prev_hash != expected_prev_hash:
+                print(f"[CORRUPT] Ledger sequence {seq_id}: Previous hash mismatch.")
+                return False
+
+            recalculated_string = f"{ts}:{action}:{payload_hash}:{prev_hash}".encode("utf-8")
+            recalculated_hash = hashlib.sha512(recalculated_string).hexdigest()
+
+            if recalculated_hash != entry_hash:
+                print(f"[CORRUPT] Ledger sequence {seq_id}: Digest tampering detected.")
+                return False
+
+            expected_prev_hash = entry_hash
+
+        return True
+
+
+# --- Operational Execution ---
+if __name__ == "__main__":
+    SECRET_KEY = b"sovereign_local_secret_vault_key"
+    
+    # 1. Initialize Enforcement Engine & Local Control Plane
+    enforcer = CovenantEnforcer(secret_key=SECRET_KEY)
+    control_plane = SovereignControlPlane()
+
+    # 2. Register Immutable Covenant Rules
+    rule = CovenantRule(
+        rule_id="RULE_DATA_UPDATE",
+        allowed_action="EXECUTE_TX",
+        max_payload_bytes=2048,
+        require_signature=True
+    )
+    enforcer.register_rule(rule)
+
+    # 3. Construct Payload & Sign
+    payload = {"account_id": "LOC-8841", "amount": 5000, "currency": "USD"}
+    payload_hash = enforcer.compute_sha512(payload)
+    signature = enforcer.generate_signature(payload_hash)
+
+    # 4. Validate & Execute locally
+    if enforcer.validate_intent("RULE_DATA_UPDATE", "EXECUTE_TX", payload, signature):
+        ledger_hash = control_plane.record_execution("EXECUTE_TX", payload_hash)
+        print(f"[SUCCESS] Intent Executed. Ledger Sealed Entry Hash:\n{ledger_hash[:32]}...")
+
+    # 5. Verify Integrity
+    is_valid = control_plane.verify_ledger_integrity()
+    print(f"[AUDIT] Ledger Verification Passed: {is_valid}")
