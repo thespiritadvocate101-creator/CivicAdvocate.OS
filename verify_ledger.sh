@@ -1,37 +1,28 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-LEDGER_FILE="${HOME}/CivicAdvocate.OS/audit_summary.json"
-PAYLOAD_DIR="${HOME}/CivicAdvocate.OS/payloads"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+LEDGER_FILE="${SCRIPT_DIR}/audit_summary.json"
 
-if [ ! -f "${LEDGER_FILE}" ]; then
+echo "[+] Starting integrity verification of CivicAdvocate.OS Audit Ledger..."
+
+if [[ ! -f "${LEDGER_FILE}" ]]; then
     echo "[FAIL] Ledger file ${LEDGER_FILE} does not exist."
     exit 1
 fi
 
-echo "[+] Starting integrity verification of CivicAdvocate.OS Audit Ledger..."
+STORED_ROOT=$(jq -r '.masterStateRoot' "${LEDGER_FILE}")
 
-EXPECTED_ROOT=$(jq -r '.masterStateRoot' "${LEDGER_FILE}")
-TEMP_HASH_LIST=$(mktemp)
-cleanup() { rm -f "${TEMP_HASH_LIST}"; }
-trap cleanup EXIT
+# Calculate payload SHA-512 digest sum across payloads directory
+CALCULATED_ROOT=$(find "${SCRIPT_DIR}/payloads" -type f -exec sha512sum {} + 2>/dev/null | sort | sha512sum | awk '{print $1}')
 
-# Re-hash current payload directory contents without newlines to match compile_ledger.sh
-for file in "${PAYLOAD_DIR}"/*; do
-    [ -f "$file" ] || continue
-    sha512sum "$file" | awk '{print $1}' | tr -d '\n' >> "${TEMP_HASH_LIST}"
-done
-
-# Recompute state root from concatenated payload hashes
-ACTUAL_ROOT=$(sha512sum "${TEMP_HASH_LIST}" | awk '{print $1}')
-
-if [ "${EXPECTED_ROOT}" = "${ACTUAL_ROOT}" ]; then
+if [[ "${STORED_ROOT}" == "${CALCULATED_ROOT}" ]]; then
     echo "[PASS] Master State Root verified successfully."
-    echo "       Root Digest: ${ACTUAL_ROOT}"
+    echo "       Root Digest: ${STORED_ROOT}"
     exit 0
 else
-    echo "[FAIL] Master State Root mismatch detected!"
-    echo "       Expected: ${EXPECTED_ROOT}"
-    echo "       Actual:   ${ACTUAL_ROOT}"
+    echo "[FAIL] Master State Root mismatch!"
+    echo "       Expected: ${STORED_ROOT}"
+    echo "       Calculated: ${CALCULATED_ROOT}"
     exit 1
 fi
