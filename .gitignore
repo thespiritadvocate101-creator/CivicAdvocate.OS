@@ -15,3 +15,7 @@ dist/
 build/
 nohup.out
 .coverage
+ed25519_private.pem
+*.log
+logs/
+archive_store/*.gz
