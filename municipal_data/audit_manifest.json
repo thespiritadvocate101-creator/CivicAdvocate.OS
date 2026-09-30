@@ -1,7 +1,6 @@
 {
-    "audit_id": "CAS-544-SYNC-0102",
-    "lockdown_timestamp": "2026-06-12 01:08:12",
-    "status": "EVIDENTIARY_LOCKED",
-    "target_abstract": "544"
+  "audit_id": "CAS-544-SYNC-0102",
+  "lockdown_timestamp": "2026-06-12 01:08:12",
+  "status": "EVIDENTIARY_LOCKED",
+  "target_abstract": "544"
 }
-TEST_BREACH_DETECTED
