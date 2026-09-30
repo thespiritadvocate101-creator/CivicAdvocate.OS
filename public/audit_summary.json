@@ -1,706 +1,706 @@
 {
   "@context": "https://schema.civicadvocate.os/contexts/audit.jsonld",
   "type": "AuditVerificationSummary",
-  "generatedAt": "2026-09-30T14:00:01Z",
+  "generatedAt": "2026-09-30T15:00:00Z",
   "masterStateRoot": "c43499a39d86c9a6a79658970e137e520b030f8e4fab90493699d449e547ad1eaf6c7e9cdb0be3ea7cb04854a03af23c5aedfba605ef92615df39276c6e49007",
   "totalRecordsExported": 100,
   "records": [
     {
-      "id": 435,
-      "timestamp": "2026-09-30T13:59:14Z",
+      "id": 615,
+      "timestamp": "2026-09-30T14:59:24Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 434,
-      "timestamp": "2026-09-30T13:59:14Z",
+      "id": 614,
+      "timestamp": "2026-09-30T14:59:24Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 433,
-      "timestamp": "2026-09-30T13:59:13Z",
+      "id": 613,
+      "timestamp": "2026-09-30T14:59:24Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 432,
-      "timestamp": "2026-09-30T13:58:13Z",
+      "id": 612,
+      "timestamp": "2026-09-30T14:58:24Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 431,
-      "timestamp": "2026-09-30T13:58:13Z",
+      "id": 611,
+      "timestamp": "2026-09-30T14:58:24Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 430,
-      "timestamp": "2026-09-30T13:58:13Z",
+      "id": 610,
+      "timestamp": "2026-09-30T14:58:24Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 429,
-      "timestamp": "2026-09-30T13:57:13Z",
+      "id": 609,
+      "timestamp": "2026-09-30T14:57:24Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 428,
-      "timestamp": "2026-09-30T13:57:13Z",
+      "id": 608,
+      "timestamp": "2026-09-30T14:57:24Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 427,
-      "timestamp": "2026-09-30T13:57:13Z",
+      "id": 607,
+      "timestamp": "2026-09-30T14:57:24Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 426,
-      "timestamp": "2026-09-30T13:56:13Z",
+      "id": 606,
+      "timestamp": "2026-09-30T14:56:24Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 425,
-      "timestamp": "2026-09-30T13:56:13Z",
+      "id": 605,
+      "timestamp": "2026-09-30T14:56:24Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 424,
-      "timestamp": "2026-09-30T13:56:12Z",
+      "id": 604,
+      "timestamp": "2026-09-30T14:56:24Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 423,
-      "timestamp": "2026-09-30T13:55:12Z",
+      "id": 603,
+      "timestamp": "2026-09-30T14:55:24Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 422,
-      "timestamp": "2026-09-30T13:55:12Z",
+      "id": 602,
+      "timestamp": "2026-09-30T14:55:24Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 421,
-      "timestamp": "2026-09-30T13:55:12Z",
+      "id": 601,
+      "timestamp": "2026-09-30T14:55:24Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 420,
-      "timestamp": "2026-09-30T13:54:12Z",
+      "id": 600,
+      "timestamp": "2026-09-30T14:54:24Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 419,
-      "timestamp": "2026-09-30T13:54:12Z",
+      "id": 599,
+      "timestamp": "2026-09-30T14:54:24Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 418,
-      "timestamp": "2026-09-30T13:54:12Z",
+      "id": 598,
+      "timestamp": "2026-09-30T14:54:24Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 417,
-      "timestamp": "2026-09-30T13:53:12Z",
+      "id": 597,
+      "timestamp": "2026-09-30T14:53:24Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 416,
-      "timestamp": "2026-09-30T13:53:12Z",
+      "id": 596,
+      "timestamp": "2026-09-30T14:53:24Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 415,
-      "timestamp": "2026-09-30T13:53:11Z",
+      "id": 595,
+      "timestamp": "2026-09-30T14:53:24Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 414,
-      "timestamp": "2026-09-30T13:52:11Z",
+      "id": 594,
+      "timestamp": "2026-09-30T14:52:24Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 413,
-      "timestamp": "2026-09-30T13:52:11Z",
+      "id": 593,
+      "timestamp": "2026-09-30T14:52:24Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 412,
-      "timestamp": "2026-09-30T13:52:11Z",
+      "id": 592,
+      "timestamp": "2026-09-30T14:52:24Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 411,
-      "timestamp": "2026-09-30T13:51:11Z",
+      "id": 591,
+      "timestamp": "2026-09-30T14:51:24Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 410,
-      "timestamp": "2026-09-30T13:51:11Z",
+      "id": 590,
+      "timestamp": "2026-09-30T14:51:24Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 409,
-      "timestamp": "2026-09-30T13:51:11Z",
+      "id": 589,
+      "timestamp": "2026-09-30T14:51:23Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 408,
-      "timestamp": "2026-09-30T13:50:11Z",
+      "id": 588,
+      "timestamp": "2026-09-30T14:50:23Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 407,
-      "timestamp": "2026-09-30T13:50:11Z",
+      "id": 587,
+      "timestamp": "2026-09-30T14:50:23Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 406,
-      "timestamp": "2026-09-30T13:50:10Z",
+      "id": 586,
+      "timestamp": "2026-09-30T14:50:23Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 405,
-      "timestamp": "2026-09-30T13:49:10Z",
+      "id": 585,
+      "timestamp": "2026-09-30T14:49:23Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 404,
-      "timestamp": "2026-09-30T13:49:10Z",
+      "id": 584,
+      "timestamp": "2026-09-30T14:49:23Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 403,
-      "timestamp": "2026-09-30T13:49:10Z",
+      "id": 583,
+      "timestamp": "2026-09-30T14:49:23Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 402,
-      "timestamp": "2026-09-30T13:48:10Z",
+      "id": 582,
+      "timestamp": "2026-09-30T14:48:23Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 401,
-      "timestamp": "2026-09-30T13:48:10Z",
+      "id": 581,
+      "timestamp": "2026-09-30T14:48:23Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 400,
-      "timestamp": "2026-09-30T13:48:10Z",
+      "id": 580,
+      "timestamp": "2026-09-30T14:48:23Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 399,
-      "timestamp": "2026-09-30T13:47:10Z",
+      "id": 579,
+      "timestamp": "2026-09-30T14:47:23Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 398,
-      "timestamp": "2026-09-30T13:47:10Z",
+      "id": 578,
+      "timestamp": "2026-09-30T14:47:23Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 397,
-      "timestamp": "2026-09-30T13:47:09Z",
+      "id": 577,
+      "timestamp": "2026-09-30T14:47:23Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 396,
-      "timestamp": "2026-09-30T13:46:09Z",
+      "id": 576,
+      "timestamp": "2026-09-30T14:46:23Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 395,
-      "timestamp": "2026-09-30T13:46:09Z",
+      "id": 575,
+      "timestamp": "2026-09-30T14:46:23Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 394,
-      "timestamp": "2026-09-30T13:46:09Z",
+      "id": 574,
+      "timestamp": "2026-09-30T14:46:23Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 393,
-      "timestamp": "2026-09-30T13:45:09Z",
+      "id": 573,
+      "timestamp": "2026-09-30T14:45:22Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 392,
-      "timestamp": "2026-09-30T13:45:09Z",
+      "id": 572,
+      "timestamp": "2026-09-30T14:45:22Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 391,
-      "timestamp": "2026-09-30T13:45:09Z",
+      "id": 571,
+      "timestamp": "2026-09-30T14:45:22Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 390,
-      "timestamp": "2026-09-30T13:44:09Z",
+      "id": 570,
+      "timestamp": "2026-09-30T14:44:22Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 389,
-      "timestamp": "2026-09-30T13:44:09Z",
+      "id": 569,
+      "timestamp": "2026-09-30T14:44:22Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 388,
-      "timestamp": "2026-09-30T13:44:09Z",
+      "id": 568,
+      "timestamp": "2026-09-30T14:44:22Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 387,
-      "timestamp": "2026-09-30T13:43:09Z",
+      "id": 567,
+      "timestamp": "2026-09-30T14:43:22Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 386,
-      "timestamp": "2026-09-30T13:43:09Z",
+      "id": 566,
+      "timestamp": "2026-09-30T14:43:22Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 385,
-      "timestamp": "2026-09-30T13:43:09Z",
+      "id": 565,
+      "timestamp": "2026-09-30T14:43:22Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 384,
-      "timestamp": "2026-09-30T13:42:09Z",
+      "id": 564,
+      "timestamp": "2026-09-30T14:42:22Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 383,
-      "timestamp": "2026-09-30T13:42:09Z",
+      "id": 563,
+      "timestamp": "2026-09-30T14:42:22Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 382,
-      "timestamp": "2026-09-30T13:42:09Z",
+      "id": 562,
+      "timestamp": "2026-09-30T14:42:22Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 381,
-      "timestamp": "2026-09-30T13:41:08Z",
+      "id": 561,
+      "timestamp": "2026-09-30T14:41:22Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 380,
-      "timestamp": "2026-09-30T13:41:08Z",
+      "id": 560,
+      "timestamp": "2026-09-30T14:41:22Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 379,
-      "timestamp": "2026-09-30T13:41:08Z",
+      "id": 559,
+      "timestamp": "2026-09-30T14:41:22Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 378,
-      "timestamp": "2026-09-30T13:40:08Z",
+      "id": 558,
+      "timestamp": "2026-09-30T14:40:22Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 377,
-      "timestamp": "2026-09-30T13:40:08Z",
+      "id": 557,
+      "timestamp": "2026-09-30T14:40:22Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 376,
-      "timestamp": "2026-09-30T13:40:08Z",
+      "id": 556,
+      "timestamp": "2026-09-30T14:40:22Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 375,
-      "timestamp": "2026-09-30T13:39:08Z",
+      "id": 555,
+      "timestamp": "2026-09-30T14:39:22Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 374,
-      "timestamp": "2026-09-30T13:39:08Z",
+      "id": 554,
+      "timestamp": "2026-09-30T14:39:22Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 373,
-      "timestamp": "2026-09-30T13:39:08Z",
+      "id": 553,
+      "timestamp": "2026-09-30T14:39:22Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 372,
-      "timestamp": "2026-09-30T13:38:08Z",
+      "id": 552,
+      "timestamp": "2026-09-30T14:38:22Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 371,
-      "timestamp": "2026-09-30T13:38:08Z",
+      "id": 551,
+      "timestamp": "2026-09-30T14:38:22Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 370,
-      "timestamp": "2026-09-30T13:38:07Z",
+      "id": 550,
+      "timestamp": "2026-09-30T14:38:22Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 369,
-      "timestamp": "2026-09-30T13:37:07Z",
+      "id": 549,
+      "timestamp": "2026-09-30T14:37:22Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 368,
-      "timestamp": "2026-09-30T13:37:07Z",
+      "id": 548,
+      "timestamp": "2026-09-30T14:37:22Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 367,
-      "timestamp": "2026-09-30T13:37:07Z",
+      "id": 547,
+      "timestamp": "2026-09-30T14:37:22Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 366,
-      "timestamp": "2026-09-30T13:36:07Z",
+      "id": 546,
+      "timestamp": "2026-09-30T14:36:22Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 365,
-      "timestamp": "2026-09-30T13:36:07Z",
+      "id": 545,
+      "timestamp": "2026-09-30T14:36:22Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 364,
-      "timestamp": "2026-09-30T13:36:07Z",
+      "id": 544,
+      "timestamp": "2026-09-30T14:36:21Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 363,
-      "timestamp": "2026-09-30T13:35:07Z",
+      "id": 543,
+      "timestamp": "2026-09-30T14:35:21Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 362,
-      "timestamp": "2026-09-30T13:35:07Z",
+      "id": 542,
+      "timestamp": "2026-09-30T14:35:21Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 361,
-      "timestamp": "2026-09-30T13:35:06Z",
+      "id": 541,
+      "timestamp": "2026-09-30T14:35:21Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 360,
-      "timestamp": "2026-09-30T13:34:06Z",
+      "id": 540,
+      "timestamp": "2026-09-30T14:34:21Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 359,
-      "timestamp": "2026-09-30T13:34:06Z",
+      "id": 539,
+      "timestamp": "2026-09-30T14:34:21Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 358,
-      "timestamp": "2026-09-30T13:34:06Z",
+      "id": 538,
+      "timestamp": "2026-09-30T14:34:21Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 357,
-      "timestamp": "2026-09-30T13:33:06Z",
+      "id": 537,
+      "timestamp": "2026-09-30T14:33:21Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 356,
-      "timestamp": "2026-09-30T13:33:06Z",
+      "id": 536,
+      "timestamp": "2026-09-30T14:33:21Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 355,
-      "timestamp": "2026-09-30T13:33:06Z",
+      "id": 535,
+      "timestamp": "2026-09-30T14:33:21Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 354,
-      "timestamp": "2026-09-30T13:32:06Z",
+      "id": 534,
+      "timestamp": "2026-09-30T14:32:21Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 353,
-      "timestamp": "2026-09-30T13:32:06Z",
+      "id": 533,
+      "timestamp": "2026-09-30T14:32:21Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 352,
-      "timestamp": "2026-09-30T13:32:06Z",
+      "id": 532,
+      "timestamp": "2026-09-30T14:32:21Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 351,
-      "timestamp": "2026-09-30T13:31:06Z",
+      "id": 531,
+      "timestamp": "2026-09-30T14:31:21Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 350,
-      "timestamp": "2026-09-30T13:31:06Z",
+      "id": 530,
+      "timestamp": "2026-09-30T14:31:21Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 349,
-      "timestamp": "2026-09-30T13:31:06Z",
+      "id": 529,
+      "timestamp": "2026-09-30T14:31:21Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 348,
-      "timestamp": "2026-09-30T13:30:06Z",
+      "id": 528,
+      "timestamp": "2026-09-30T14:30:21Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 347,
-      "timestamp": "2026-09-30T13:30:06Z",
+      "id": 527,
+      "timestamp": "2026-09-30T14:30:21Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 346,
-      "timestamp": "2026-09-30T13:30:05Z",
+      "id": 526,
+      "timestamp": "2026-09-30T14:30:21Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 345,
-      "timestamp": "2026-09-30T13:29:05Z",
+      "id": 525,
+      "timestamp": "2026-09-30T14:29:20Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 344,
-      "timestamp": "2026-09-30T13:29:05Z",
+      "id": 524,
+      "timestamp": "2026-09-30T14:29:20Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 343,
-      "timestamp": "2026-09-30T13:29:05Z",
+      "id": 523,
+      "timestamp": "2026-09-30T14:29:20Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 342,
-      "timestamp": "2026-09-30T13:28:05Z",
+      "id": 522,
+      "timestamp": "2026-09-30T14:28:20Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 341,
-      "timestamp": "2026-09-30T13:28:05Z",
+      "id": 521,
+      "timestamp": "2026-09-30T14:28:20Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 340,
-      "timestamp": "2026-09-30T13:28:05Z",
+      "id": 520,
+      "timestamp": "2026-09-30T14:28:20Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 339,
-      "timestamp": "2026-09-30T13:27:05Z",
+      "id": 519,
+      "timestamp": "2026-09-30T14:27:20Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 338,
-      "timestamp": "2026-09-30T13:27:05Z",
+      "id": 518,
+      "timestamp": "2026-09-30T14:27:20Z",
       "vector": "CountyClerk",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 337,
-      "timestamp": "2026-09-30T13:27:05Z",
+      "id": 517,
+      "timestamp": "2026-09-30T14:27:20Z",
       "vector": "Financial",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
     },
     {
-      "id": 336,
-      "timestamp": "2026-09-30T13:26:05Z",
+      "id": 516,
+      "timestamp": "2026-09-30T14:26:20Z",
       "vector": "EPAExchange",
       "statusCode": 200,
       "payloadHash": "c3e25dfdc32793501b7e6e3afa3c54905cae6efdd676b0b1693ebee634789e3140562c33d8c37645e65a0f3321f28426f8bbf4808bef8a6cc4711b959e667250"
