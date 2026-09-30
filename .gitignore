@@ -20,3 +20,8 @@ ed25519_private.pem
 logs/
 archive_store/*.gz
 .env
+# Runtime and generated audit artifacts
+audit_summary.json
+payloads/
+logs/
+*.log
