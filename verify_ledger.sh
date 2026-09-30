@@ -13,8 +13,8 @@ fi
 
 STORED_ROOT=$(jq -r '.masterStateRoot' "${LEDGER_FILE}")
 
-# Calculate payload SHA-512 digest sum across payloads directory
-CALCULATED_ROOT=$(find "${SCRIPT_DIR}/payloads" -type f -exec sha512sum {} + 2>/dev/null | sort | sha512sum | awk '{print $1}')
+# Calculate payload SHA-512 digest using canonical relative paths (cd into repo root)
+CALCULATED_ROOT=$(cd "${SCRIPT_DIR}" && find payloads -type f -exec sha512sum {} + 2>/dev/null | sort -k2 | sha512sum | awk '{print $1}')
 
 if [[ "${STORED_ROOT}" == "${CALCULATED_ROOT}" ]]; then
     echo "[PASS] Master State Root verified successfully."
