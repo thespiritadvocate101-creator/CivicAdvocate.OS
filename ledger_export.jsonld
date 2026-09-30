@@ -1,0 +1,56 @@
+[
+  {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://schema.org"
+    ],
+    "id": "urn:civicadvocate:ledger:entry:1",
+    "type": [
+      "VerifiableCredential",
+      "AuditLedgerRecord"
+    ],
+    "issuer": "urn:civicadvocate:node:ed25519:local",
+    "issuanceDate": "2026-09-29T06:54:21Z",
+    "credentialSubject": {
+      "id": "urn:civicadvocate:ledger:sequence:1",
+      "sequenceId": 1,
+      "action": "COMMIT_RECORD",
+      "payloadHash": "18d09829484c37665640612b265e22c99a323480751950586541b293280d5307bf41357abc5526d75fd6563e8abaa4b13b40977516b70ba753367b46f8fdee41",
+      "previousHash": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "entryHash": "d8f01d9a635e7a7be96624c4c7d7c72cd51e8c2391c6e468bb3e9cb5bc69e5bbc896f8816d577d7edee09ce1ce960a335fe5c7c431e3baf6674652deef21fbc2"
+    },
+    "proof": {
+      "type": "Ed25519Signature2020",
+      "created": "2026-09-29T06:54:21Z",
+      "verificationMethod": "urn:civicadvocate:key:ed25519_public",
+      "proofPurpose": "assertionMethod"
+    }
+  },
+  {
+    "@context": [
+      "https://www.w3.org/2018/credentials/v1",
+      "https://schema.org"
+    ],
+    "id": "urn:civicadvocate:ledger:entry:2",
+    "type": [
+      "VerifiableCredential",
+      "AuditLedgerRecord"
+    ],
+    "issuer": "urn:civicadvocate:node:ed25519:local",
+    "issuanceDate": "2026-09-29T06:56:44Z",
+    "credentialSubject": {
+      "id": "urn:civicadvocate:ledger:sequence:2",
+      "sequenceId": 2,
+      "action": "COMMIT_RECORD",
+      "payloadHash": "18d09829484c37665640612b265e22c99a323480751950586541b293280d5307bf41357abc5526d75fd6563e8abaa4b13b40977516b70ba753367b46f8fdee41",
+      "previousHash": "d8f01d9a635e7a7be96624c4c7d7c72cd51e8c2391c6e468bb3e9cb5bc69e5bbc896f8816d577d7edee09ce1ce960a335fe5c7c431e3baf6674652deef21fbc2",
+      "entryHash": "90ed9f8d760112b15545aee8db69b399f66751fa1f2ccca28ed7c24dece3ba5adccfd97f8184878e02f5307fe35d5e6c30f00620daf47cab9ce1f0a67276ccbd"
+    },
+    "proof": {
+      "type": "Ed25519Signature2020",
+      "created": "2026-09-29T06:56:44Z",
+      "verificationMethod": "urn:civicadvocate:key:ed25519_public",
+      "proofPurpose": "assertionMethod"
+    }
+  }
+]
