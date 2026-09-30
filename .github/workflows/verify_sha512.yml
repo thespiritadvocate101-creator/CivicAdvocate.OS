@@ -1,64 +1,20 @@
-name: SHA-512 & GeoJSON Integrity Verification
+name: SHA-512 Audit Ledger Verification
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ "main" ]
-  workflow_dispatch:
+    branches: [ main, master ]
 
 jobs:
-  verify-integrity:
+  verify-ledger:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Set up Python & Dependencies
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
+      - name: Ensure Verification Script Execution Permissions
+        run: chmod +x ./verify_ledger.sh
 
-      - name: Install Validation Tools
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y jq coreutils
-
-      - name: Verify JSON/GeoJSON Syntax & Re-calculate SHA-512 Digests
-        run: |
-          echo "=================================================="
-          echo "[+] Starting Public Digest Verification"
-          echo "=================================================="
-
-          FAILED=0
-          PASSED=0
-
-          # Locate all core JSON and GeoJSON files, explicitly excluding submodules/vendor directories
-          while IFS= read -r file; do
-            echo "Auditing: $file"
-            
-            # 1. Validate JSON syntax
-            if ! jq empty "$file" > /dev/null 2>&1; then
-              echo "  [-] FAIL: Invalid JSON syntax in $file"
-              FAILED=$((FAILED + 1))
-              continue
-            fi
-
-            # 2. Compute canonical SHA-512 (sorted keys, compact layout)
-            CANONICAL_HASH=$(jq -c -S '.' "$file" | sha512sum | awk '{print $1}')
-            RAW_HASH=$(sha512sum "$file" | awk '{print $1}')
-
-            echo "  [+] Raw SHA-512       : $RAW_HASH"
-            echo "  [+] Canonical SHA-512 : $CANONICAL_HASH"
-
-            PASSED=$((PASSED + 1))
-          done < <(find . -type f \( -name "*.json" -o -name "*.geojson" \) -not -path "*/.*" -not -path "./llama.cpp*")
-
-          echo "=================================================="
-          echo "Verification Complete: $PASSED passed, $FAILED failed."
-          echo "=================================================="
-
-          if [ $FAILED -gt 0 ]; then
-            exit 1
-          fi
+      - name: Execute Cryptographic Audit Verification
+        run: ./verify_ledger.sh
