@@ -1,28 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Ensure standard PATH for cron / Termux execution environments
 PATH="/data/data/com.termux/files/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH"
 
 ENDPOINT_URL="https://thespiritadvocate101-creator.github.io/CivicAdvocate.OS/ledger_export.jsonld"
 LOG_FILE="remote_ledger_monitor.log"
-TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+POLL_INTERVAL=60
 
 log_message() {
-    echo "[$TIMESTAMP] $1" | tee -a "$LOG_FILE"
+    local current_time=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+    echo "[$current_time] $1" | tee -a "$LOG_FILE"
 }
 
-# Fetch JSON-LD payload
 TEMP_JSON=$(mktemp)
 trap 'rm -f "$TEMP_JSON"' EXIT
 
-if ! curl -sS --fail --max-time 15 "$ENDPOINT_URL" -o "$TEMP_JSON"; then
-    log_message "[CRITICAL] HTTP GET failed for endpoint: $ENDPOINT_URL"
-    exit 1
-fi
+log_message "[STARTUP] Initializing persistent remote ledger monitor. Polling every $POLL_INTERVAL seconds."
 
-# Run cryptographic audit against fetched ledger
-AUDIT_OUTPUT=$(python3 - <<PYEOF 2>&1
+while true; do
+    if ! curl -sS --fail --max-time 15 "$ENDPOINT_URL" -o "$TEMP_JSON"; then
+        log_message "[WARNING] HTTP GET failed for endpoint: $ENDPOINT_URL. Retrying next cycle."
+        sleep $POLL_INTERVAL
+        continue
+    fi
+
+    AUDIT_OUTPUT=$(python3 - <<PYEOF 2>&1
 import sys, json, hashlib
 
 try:
@@ -65,14 +67,17 @@ if all_valid:
 else:
     sys.exit(1)
 PYEOF
-)
+    )
 
-STATUS=$?
+    STATUS=$?
 
-if [ $STATUS -eq 0 ]; then
-    log_message "[AUDIT PASSED] $AUDIT_OUTPUT"
-else
-    log_message "[AUDIT FAILED] $AUDIT_OUTPUT"
-    # Optional notification or alert integration can be triggered here
-    exit 1
-fi
+    if [ $STATUS -eq 0 ]; then
+        log_message "[AUDIT PASSED] $AUDIT_OUTPUT"
+    else
+        log_message "[CRITICAL FAILURE] $AUDIT_OUTPUT"
+        log_message "[FATAL] Ledger integrity compromised. Halting monitor to preserve forensic state."
+        exit 1
+    fi
+
+    sleep $POLL_INTERVAL
+done
