@@ -23,14 +23,14 @@ class MockSOAPHandler(BaseHTTPRequestHandler):
         self.wfile.write(resp.encode('utf-8'))
 
 if __name__ == "__main__":
-    server = HTTPServer(('127.0.0.1', 8080), MockSOAPHandler)
+    server = HTTPServer(('127.0.0.1', 8081), MockSOAPHandler)
     server.serve_forever()
 SERVER_EOF
 
 python3 local_soap_server.py &
 SERVER_PID=$!
 sleep 1
-echo "[+] Mock SOAP server active on http://127.0.0.1:8080 (PID: $SERVER_PID)"
+echo "[+] Mock SOAP server active on http://127.0.0.1:8081 (PID: $SERVER_PID)"
 
 # 2. Execute Multi-Vector Dispatcher pointing to loopback
 cat << 'DISPATCH_EOF' > multi_soap_dispatcher.py
@@ -38,9 +38,9 @@ import urllib.request
 import sys
 
 vectors = {
-    "Financial": "http://127.0.0.1:8080/clearing/soap_v2.asmx",
-    "CountyClerk": "http://127.0.0.1:8080/services/record_node.asmx",
-    "EPAExchange": "http://127.0.0.1:8080/cdx-en-node/services/NetworkNodePort"
+    "Financial": "http://127.0.0.1:8081/clearing/soap_v2.asmx",
+    "CountyClerk": "http://127.0.0.1:8081/services/record_node.asmx",
+    "EPAExchange": "http://127.0.0.1:8081/cdx-en-node/services/NetworkNodePort"
 }
 
 for name, url in vectors.items():
