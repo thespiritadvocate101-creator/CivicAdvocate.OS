@@ -1,6 +1,7 @@
 name: SHA-512 Audit Ledger Verification
 
 on:
+  workflow_dispatch:
   push:
     branches: [ main, master ]
   pull_request:
