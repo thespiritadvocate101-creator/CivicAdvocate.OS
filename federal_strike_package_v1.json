@@ -27,5 +27,16 @@
     "latest_transaction_id": 3,
     "chain_digest_sha512": "cd33f591debe695dc6e3090aa60319ad8fd1dcd45fb7f16475e97fd902c24f102973fa230f958541a4bba44f87d68d0750905d1e44891c3beef06cf7c4a693bf",
     "manifest_signature": "27614e40d8efe7298c688892efbc1e3cb0f9e063b6d9769d453f27935043b25faffa88f7b3ae3caa18a7d0d98ed2dfd5eaa4841335db64d6c75afeb61f0d918b"
+  },
+  "billing_ledger": {
+    "current_accruals": [
+      {
+        "timestamp": "2026-10-02T11:00:05.720678",
+        "service": "forensic_audit_service",
+        "fee": 500.0,
+        "status": "ACCRUED"
+      }
+    ],
+    "total_accrued": 500.0
   }
 }

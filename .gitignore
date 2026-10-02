@@ -25,3 +25,7 @@ audit_summary.json
 payloads/
 logs/
 *.log
+
+*.aux
+*.out
+*.log
