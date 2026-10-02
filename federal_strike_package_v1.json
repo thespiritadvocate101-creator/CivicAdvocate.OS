@@ -1,24 +1,31 @@
 {
-  "package_id": "FSP-A544-2026-01",
-  "timestamp": "2026-09-22T18:56:05Z",
-  "target": "ABSTRACT 544",
-  "batch_id": "F2AQ6KKSNUPXE",
-  "status": "INITIALIZED",
-  "anchored_vectors": [
-    "Abstract 544",
-    "Silas Elbert Bandy",
-    "Taylor Winona",
-    "Miller Elizabeth"
-  ],
-  "billing_ledger": {
-    "current_accruals": [
+  "$schema": "https://schema.org/DataFeed",
+  "package_id": "FSP-TX-JOHNSON-2026-V1",
+  "authority_level": "Federal Audit / Public Integrity",
+  "timestamp_utc": "2026-10-02T14:55:00Z",
+  "jurisdiction": {
+    "state": "Texas",
+    "county": "Johnson County",
+    "target_abstracts": [
       {
-        "timestamp": "2026-10-02T09:00:04.582933",
-        "service": "forensic_audit_service",
-        "fee": 500.0,
-        "status": "ACCRUED"
+        "abstract_number": "544",
+        "survey_name": "Silas Elbert Bandy Survey",
+        "cadastral_variance_status": "Audited",
+        "primary_parcel_hash": "d9eca651598d088474acc676c530d62cca0ed7a06cf2a88de299cb40c02b2d76bcf21f54e7729b7e07a6dfa3cda79b6d382f51376d68b795b3af2fe9d05d73ca"
       }
-    ],
-    "total_accrued": 500.0
+    ]
+  },
+  "compliance_cross_reference": {
+    "epa_echo_pipeline": {
+      "query_script": "query_epa_echo_johnson.py",
+      "spatial_analysis_script": "proximity_audit.py",
+      "status": "Active Intersection"
+    }
+  },
+  "cryptographic_ledger_anchor": {
+    "db_reference": "civicadvocate_ledger.db",
+    "latest_transaction_id": 3,
+    "chain_digest_sha512": "cd33f591debe695dc6e3090aa60319ad8fd1dcd45fb7f16475e97fd902c24f102973fa230f958541a4bba44f87d68d0750905d1e44891c3beef06cf7c4a693bf",
+    "manifest_signature": "27614e40d8efe7298c688892efbc1e3cb0f9e063b6d9769d453f27935043b25faffa88f7b3ae3caa18a7d0d98ed2dfd5eaa4841335db64d6c75afeb61f0d918b"
   }
 }
