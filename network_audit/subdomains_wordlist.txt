@@ -1,0 +1,12 @@
+www
+mail
+api
+dev
+staging
+blog
+shop
+admin
+status
+vpn
+ns1
+secure
