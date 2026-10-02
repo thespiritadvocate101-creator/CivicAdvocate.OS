@@ -44,6 +44,20 @@
       },
       "previousStateHash": "2015b7e8fe7b944abd5e7af57d5be6ed4ed2ea4ed54886f18a8d14090ac3a009d2a5a6231bc1128bdd798fa063d53aee1ee451201cc791ac99d0141ad137f707",
       "sha512Digest": "cd33f591debe695dc6e3090aa60319ad8fd1dcd45fb7f16475e97fd902c24f102973fa230f958541a4bba44f87d68d0750905d1e44891c3beef06cf7c4a693bf"
+    },
+    {
+      "@type": "AccountingRecord",
+      "recordId": 4,
+      "timestamp": "2026-10-02T16:01:38.436882+00:00",
+      "agent": "Brandon Lynn Campbell",
+      "description": "Spatial Proximity Audit - Abstract 544 (12 EPA Facilities Mapped)",
+      "amount": {
+        "@type": "MonetaryAmount",
+        "currency": "USD",
+        "value": 0.0
+      },
+      "previousStateHash": "cd33f591debe695dc6e3090aa60319ad8fd1dcd45fb7f16475e97fd902c24f102973fa230f958541a4bba44f87d68d0750905d1e44891c3beef06cf7c4a693bf",
+      "sha512Digest": "a2ec28bbcf0590c60fa54e0ad23dbd2dd2eb297716731fa82e8af364fe21ba0b3966818ed37f0a74d124007c79541ea82ec35b3bdaaeaf6f5ae7b56390f71039"
     }
   ]
 }
