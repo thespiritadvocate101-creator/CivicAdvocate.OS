@@ -31,7 +31,7 @@
   "billing_ledger": {
     "current_accruals": [
       {
-        "timestamp": "2026-10-02T11:00:05.720678",
+        "timestamp": "2026-10-02T13:00:05.736087",
         "service": "forensic_audit_service",
         "fee": 500.0,
         "status": "ACCRUED"
