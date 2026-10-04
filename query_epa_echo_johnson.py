@@ -17,7 +17,7 @@ def fetch_program_facilities(service_prefix):
     
     print(f"Querying {service_prefix} for Johnson County, TX...")
     try:
-        response = requests.get(url, params=params, timeout=30)
+        response = requests.get(url, params=params, timeout=120)
         response.raise_for_status()
     except requests.exceptions.RequestException as e:
         print(f"API connection error on {service_prefix}: {e}")
@@ -38,7 +38,7 @@ def fetch_program_facilities(service_prefix):
         }
         time.sleep(1)
         try:
-            qid_resp = requests.get(qid_url, params=qid_params, timeout=30)
+            qid_resp = requests.get(qid_url, params=qid_params, timeout=120)
             qid_resp.raise_for_status()
             facilities = qid_resp.json().get("Results", {}).get("Facilities", [])
         except requests.exceptions.RequestException as e:

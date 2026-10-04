@@ -1,41 +1,7 @@
-Resources:
-  # Centralized tracking target for audit logs (Self-auditing enabled)
-  CleburneRecordAuditLogs:
-    Type: 'AWS::S3::Bucket'
-    Properties:
-      BucketName: 'cleburne-records-audit-logs'
-      ObjectLockEnabled: true
-      ObjectLockConfiguration:
-        ObjectLockEnabled: 'Enabled'
-        Rule:
-          DefaultRetention:
-            Mode: 'COMPLIANCE'
-            Days: 365
-      # Satisfies the Guard rule by capturing the log bucket's own access trails
-      LoggingConfiguration:
-        DestinationBucketName: 'cleburne-records-audit-logs'
-        LogFilePrefix: 'audit-logs-self-access/'
-      BucketEncryption:
-        ServerSideEncryptionConfiguration:
-          - ServerSideEncryptionByDefault:
-              SSEAlgorithm: 'AES256'
+lineage_anchor:
+  primary_key: "AB544-SILAS-ELBERT-BANDY-ROOT"
+  node_id: "civic-advocate-node-01"
 
-  # Primary auditable data asset
-  CleburneRecordStorage:
-    Type: 'AWS::S3::Bucket'
-    Properties:
-      BucketName: 'cleburne-public-records-archive'
-      ObjectLockEnabled: true
-      ObjectLockConfiguration:
-        ObjectLockEnabled: 'Enabled'
-        Rule:
-          DefaultRetention:
-            Mode: 'COMPLIANCE'
-            Days: 365
-      LoggingConfiguration:
-        DestinationBucketName: 'cleburne-records-audit-logs'
-        LogFilePrefix: 'archive-access-mutations/'
-      BucketEncryption:
-        ServerSideEncryptionConfiguration:
-          - ServerSideEncryptionByDefault:
-              SSEAlgorithm: 'AES256'
+persistence_settings:
+  autonomous_mode: "ENABLED"
+  heartbeat_interval: 10
