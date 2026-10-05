@@ -1,0 +1,21 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm'
+    id 'java-gradle-plugin'
+}
+
+gradlePlugin {
+    plugins {
+        civicAdvocatePlugin {
+            id = 'org.example.civicadvocate'
+            implementationClass = 'org.example.CivicAdvocateOSPlugin'
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+}
+
+test {
+    useJUnitPlatform()
+}
