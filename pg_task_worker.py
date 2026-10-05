@@ -36,6 +36,7 @@ def run_worker_loop():
     pg_conn.autocommit = False
 
     script_map = {
+        'SPATIAL_AUDIT_SYNC': 'query_epa_echo_johnson.py',
         'epa_echo_compliance_sync': 'query_epa_echo_johnson.py',
         'jcad_certified_roll_sync': 'parse_patent.py',
         'jcad_gis_boundary_sync': 'compute_acreage.py',
