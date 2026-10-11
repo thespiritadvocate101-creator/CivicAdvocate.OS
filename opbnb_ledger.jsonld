@@ -3,13 +3,13 @@
     "https://www.w3.org/2018/credentials/v1",
     "https://w3id.org/security/suites/ed25519-2020/v1"
   ],
-  "id": "urn:uuid:civicadvocate-audit-opbnb-20261011150502",
+  "id": "urn:uuid:civicadvocate-audit-opbnb-20261011151002",
   "type": [
     "VerifiableCredential",
     "AuditLedger"
   ],
   "issuer": "urn:did:civicadvocate:os:core",
-  "issuanceDate": "2026-10-11T15:05:02.746627+00:00Z",
+  "issuanceDate": "2026-10-11T15:10:02.790621+00:00Z",
   "credentialSubject": {
     "id": "urn:civicadvocate:opbnb:transfers",
     "transfers": [
@@ -837,6 +837,61 @@
         "valueWei": "0",
         "evidenceSeal": "91f2f13946cd28b055663c44ee6b78482868174d3c7cac9c1498299864b35029451b24bef0e1c89aa7d8f0717644275be008ad2482524a0c2c50b70aab1df9f6",
         "recordedAt": "2026-10-11T10:05:01.787294-05:00"
+      },
+      {
+        "type": "BlockchainTransfer",
+        "txHash": "0xf3af088ada0f020b237b48f5145f282192b6f28b47183745d30aca53d1389c6d",
+        "blockNumber": 194457873,
+        "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+        "to": "0x4200000000000000000000000000000000000015",
+        "asset": "BNB",
+        "valueWei": "0",
+        "evidenceSeal": "2f87a224a71394695d1fcc33fe46334526aabb1b81ab9e151bce8d391e7b73c5527022975ba38e06f86b39cd112fc89ab9f905422e5cefd5c3bf04cde2720152",
+        "recordedAt": "2026-10-11T10:10:02.325654-05:00"
+      },
+      {
+        "type": "BlockchainTransfer",
+        "txHash": "0x421dcae314cf0e6732442bcba93feeb5c34d3065a8d4b621f1bd190e5ce7a152",
+        "blockNumber": 194457874,
+        "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+        "to": "0x4200000000000000000000000000000000000015",
+        "asset": "BNB",
+        "valueWei": "0",
+        "evidenceSeal": "a689df95ea24bde2bd53cc0ec8f615ef3bf191e485914fdafd4713672abeb47e6580042a2b7228cdc4645222667d339f5c47676f4477e2d8342ceec1db22e6b9",
+        "recordedAt": "2026-10-11T10:10:02.239151-05:00"
+      },
+      {
+        "type": "BlockchainTransfer",
+        "txHash": "0x08669480c2ea1180fbeba473c693245db03317491eb7f71991283b64cc93761c",
+        "blockNumber": 194457875,
+        "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+        "to": "0x4200000000000000000000000000000000000015",
+        "asset": "BNB",
+        "valueWei": "0",
+        "evidenceSeal": "26dd97ad571451ddd37eb40234b8f9cdccc8ce5e0c5ac22760c5c053dac1dcd3200f8d95a3826f9820e17f8a0d3c16b1ff79b5735e2457f6b44ea1bbe54765da",
+        "recordedAt": "2026-10-11T10:10:02.153190-05:00"
+      },
+      {
+        "type": "BlockchainTransfer",
+        "txHash": "0xcad2a86787689c7c2736fa08a8f561054201205b222a4e5da4f4544fdd20366d",
+        "blockNumber": 194457876,
+        "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+        "to": "0x4200000000000000000000000000000000000015",
+        "asset": "BNB",
+        "valueWei": "0",
+        "evidenceSeal": "589c24b6b9fe03235af51c5310330b82b5420372ffc197c1c0e2314305aa63ec954d0309b0f6ac509b070bb5b590e75c89baab3a34d8a315a862f5a3270982d2",
+        "recordedAt": "2026-10-11T10:10:02.023865-05:00"
+      },
+      {
+        "type": "BlockchainTransfer",
+        "txHash": "0x71529c921b1da249b90264a2e7d963ec5a9e1cb85e9e0a0f00654a1ef0071e1c",
+        "blockNumber": 194457877,
+        "from": "0xdeaddeaddeaddeaddeaddeaddeaddeaddead0001",
+        "to": "0x4200000000000000000000000000000000000015",
+        "asset": "BNB",
+        "valueWei": "0",
+        "evidenceSeal": "b32af4333e506478dd8f6535941e51e5b1a545eece4df05aee52d3ed261b26d70439e6b121207cbd3a6d08b8474b8667c4ebc968a31b43f6592540a83e53b438",
+        "recordedAt": "2026-10-11T10:10:01.936462-05:00"
       }
     ]
   }
