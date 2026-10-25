@@ -1,9 +1,11 @@
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=61.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "civic-advocate-os"
+name = "CivicAdvocate"
 version = "0.1.0"
-description = "CivicAdvocate OS Ledger and Pipeline Utilities"
+description = "CivicAdvocate framework"
+readme = "README.md"
+requires-python = ">=3.8"
 dependencies = []
