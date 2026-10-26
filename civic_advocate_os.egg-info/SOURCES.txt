@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+civic_advocate_os.egg-info/PKG-INFO
+civic_advocate_os.egg-info/SOURCES.txt
+civic_advocate_os.egg-info/dependency_links.txt
+civic_advocate_os.egg-info/requires.txt
+civic_advocate_os.egg-info/top_level.txt
