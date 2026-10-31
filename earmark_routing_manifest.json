@@ -8,5 +8,5 @@
         "verification_status": "Bound to Verified State Record",
         "timestamp_utc": "2026-09-27T20:23:13.819016+00:00"
     },
-    "cryptographic_seal": "701170cdbd384666aab8d3c37fad799c6052b97ec6b7d7b5628ad7c7ad2e3606"
+    "cryptographic_seal": "7e1da464041d7018f9c17dd0f80d886186bf9e0e1b08dd0df7c85da4525e667bdabdc81412f364bfd26bf7249621c11c34737ad0303a8e42a904b9b777c5dee3"
 }
