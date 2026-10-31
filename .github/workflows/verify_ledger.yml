@@ -1,16 +1,9 @@
-jobs:
-  verify:
-    runs-on: ubuntu-latest
-    steps:
-      # ⚠️ THIS STEP MUST BE HERE TO DOWNLOAD YOUR CODE
-      - name: Check out repository code
-        uses: actions/checkout@v4
-
-      # ... then your Python setup/install steps follow
 name: Verify and Publish Ledger
 
 on:
   push:
+    branches: [ main, master ]
+  pull_request:
     branches: [ main, master ]
   workflow_dispatch:
 
@@ -20,30 +13,40 @@ permissions:
   id-token: write
 
 jobs:
-  verify-and-publish:
+  verify:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Verify Ed25519 Signature
-        run: |
-          echo "[*] Verifying cryptographic signature of ledger export..."
-          openssl pkeyutl -verify -pubin -inkey docs/public_key.pem -sigfile docs/ledger_export.jsonld.sig -in docs/ledger_export.jsonld
-          echo "[+] Signature verification passed successfully."
+      - name: Make verification script executable
+        run: chmod +x ./verify_ledger.sh
 
-      - name: Validate SHA-512 Checksum
-        run: |
-          echo "[*] Verifying SHA-512 checksum..."
-          sha512sum -c docs/ledger_export.jsonld.sha512
+      - name: Run ledger verification
+        run: ./verify_ledger.sh
 
-      - name: Setup Pages
+  deploy-pages:
+    needs: verify
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload Artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'docs'
+          path: './docs'
 
       - name: Deploy to GitHub Pages
         id: deployment
